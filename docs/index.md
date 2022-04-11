@@ -16,7 +16,7 @@ Terminology- and Ontology-based Phenotyping Framework
 
 ---
 
-The TOP Framework enables users to model phenotypes according to the [Core Ontology of Phenotypes](https://github.com/Onto-Med/COP). It also inclused a custom reasoning engine and query service for classification of individual data and searching in data repositories (e.g., Health Data Stores).
+The TOP Framework enables users to model phenotypes according to the [Core Ontology of Phenotypes](https://github.com/Onto-Med/COP). It also includes a custom reasoning engine and query service for classification of individual data and searching in data repositories (e.g., Health Data Stores).
 
 ## Getting started
 Follow these instructions to set up the TOP framework:
