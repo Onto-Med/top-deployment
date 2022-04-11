@@ -37,4 +37,4 @@ Follow these instructions to set up the TOP framework:
 The TOP Framework is currently under heavy development. Do not use it in a production environment!
 
 ### License
-The source code of the components is currently closed source and not licensed for distribution or use.
+The source code of the TOP Framework components is currently closed source and not licensed for distribution or use.
