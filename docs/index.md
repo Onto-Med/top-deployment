@@ -9,12 +9,14 @@ permalink: /
 # TOP Framework
 {: .fs-9 }
 
-TOP stands for Terminology- and Ontology-based Phenotyping. The TOP Framework enables users to model phenotypes according to the [Core Ontology of Phenotypes](https://github.com/Onto-Med/COP). It also inclused a custom reasoning engine and query service for classification of individual data and searching in data repositories (e.g., Health Data Stores).
+Terminology- and Ontology-based Phenotyping Framework
 {: .fs-6 .fw-300 }
 
 [Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/Onto-Med/top-deployment){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
+
+The TOP Framework enables users to model phenotypes according to the [Core Ontology of Phenotypes](https://github.com/Onto-Med/COP). It also inclused a custom reasoning engine and query service for classification of individual data and searching in data repositories (e.g., Health Data Stores).
 
 ## Getting started
 Follow these instructions to set up the TOP framework:
