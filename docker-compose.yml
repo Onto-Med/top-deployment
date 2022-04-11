@@ -25,6 +25,8 @@ services:
 
   frontend:
     image: ghcr.io/onto-med/top-frontend
+    ports:
+      - 80:80
     environment:
       - API_URL=http://localhost:8080
 
