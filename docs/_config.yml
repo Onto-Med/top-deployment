@@ -1,1 +1,27 @@
 remote_theme: just-the-docs/just-the-docs
+title: TOP Framework
+description: Terminology- and Ontology-based Phenotyping Framework
+
+aux_links:
+  "TOP Framework on GitHub":
+    - "//github.com/Onto-Med/top-deployment"
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+last_edit_timestamp: true
+last_edit_time_format: "%Y-%m-%d at %R %p"
+
+gh_edit_link: true
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/Onto-Med/top-deployment"
+gh_edit_branch: "main"
+gh_edit_view_mode: "tree"
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
