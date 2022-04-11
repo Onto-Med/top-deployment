@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  db:
+    image: neo4j
+    ports:
+      - 7687:7687
+    volumes:
+      - db-data:/data
+    environment:
+      - NEO4J_AUTH=neo4j/test
+
+  backend:
+    image: ghcr.io/onto-med/top-backend
+    depends_on:
+      - db
+    ports:
+      - 8080:8080
+    environment:
+      - APP_PATH=/
+      - DB_HOST=db
+      - DB_PORT=7687
+      - DB_USER=neo4j
+      - DB_PASS=test
+
+  frontend:
+    image: ghcr.io/onto-med/top-frontend
+    environment:
+      - API_URL=http://localhost:8080
+
+volumes:
+  db-data:
+    external: true
