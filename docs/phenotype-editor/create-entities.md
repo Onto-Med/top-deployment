@@ -16,7 +16,7 @@ You can create new entities by right clicking anywhere in the tree. If you click
 
 A right click will always open a context menu with one ore more options, depending in the item you clicked on. In the example below a right click was performed on the category "Anthropometrics", thus displayed options to create abstract phenotypes, as well as to delete the category it selfe.
 
-![Creating an entity](/assets/images/phenotype-editor-create.png)
+![Creating an entity](../assets/images/phenotype-editor-create.png)
 
 After selecting on of the proposed options, a new tab will open on the right side of the editor. Fill out the fields and provide describing metadata where applicable. When you are satisfied, click on the "Save" button to persist the entered data.
 
