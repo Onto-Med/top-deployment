@@ -3,6 +3,8 @@ version: '3.9'
 services:
   db:
     image: neo4j
+    restart: unless-stopped
+    stop_grace_period: 1m30s
     volumes:
       - top-data:/data
     env_file:
@@ -10,6 +12,7 @@ services:
 
   backend:
     image: ghcr.io/onto-med/top-backend
+    restart: unless-stopped
     depends_on:
       - db
     ports:
@@ -23,6 +26,7 @@ services:
 
   frontend:
     image: ghcr.io/onto-med/top-frontend
+    restart: unless-stopped
     ports:
       - 80:80
     environment:
