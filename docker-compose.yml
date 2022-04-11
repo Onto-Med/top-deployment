@@ -6,7 +6,7 @@ services:
     ports:
       - 7687:7687
     volumes:
-      - db-data:/data
+      - top-data:/data
     environment:
       - NEO4J_AUTH=neo4j/test
 
@@ -31,4 +31,4 @@ services:
       - API_URL=http://localhost:8080
 
 volumes:
-  db-data:
+  top-data:
