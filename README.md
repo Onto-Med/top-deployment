@@ -1,5 +1,11 @@
 # TOP Framework Deployment
-Deployment instructions and resources for the TOP Framework.
+This repository contains deployment instructions and resources for the TOP Framework.
+
+The TOP Framework consists of:
+
+* **Frontend:** [Vue.js](https://vuejs.org) and [Quasar](https://quasar.dev) based Single-Page Application ([top-frontend](https://github.com/Onto-Med/top-frontend))
+* **Backend:** [Spring Boot Resource Server](https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/index.html) ([top-backend](https://github.com/Onto-Med/top-backend))
+* **Database:** [Neo4j](https://neo4j.com)
 
 ## State of the Project
 The TOP Framework is currently under heavy development. Do not use it in a production environment!
@@ -12,6 +18,9 @@ Follow these instructions to set up the TOP framework:
         git clone https://github.com/Onto-Med/top-deployment.git
         cd top-deployment
 2. Modify the environment variables as needed
-3. Use Docker Compose to startup the TOP Framework services
+3. Log in to GitHub Container Registry with personal access token
+
+        echo $PAT | docker login ghcr.io --username <username> --password-stdin
+4. Use Docker Compose to startup the TOP Framework services
 
         docker compose up -d
