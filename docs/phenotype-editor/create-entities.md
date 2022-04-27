@@ -20,5 +20,12 @@ A right click will always open a context menu with one ore more options, dependi
 
 After selecting on of the proposed options, a new tab will open on the right side of the editor. Fill out the fields and provide describing metadata where applicable. When you are satisfied, click on the "Save" button to persist the entered data.
 
-## Modify
-To modify existing entities, just left click on the desired entity in the tree on the left side. A tab with the selected entity will be displayed on the right side. You can now modify the field values and click on "Save" to finish the modification.
+## Update
+To update existing entities, just left click on the desired entity in the tree on the left side. A tab with the selected entity will be displayed on the right side. You can now modify the field values and click on "Save" to submit the modifications.
+
+## Delete
+As shown in the screenshot above, the context menu of entities in the tree on the left site contains an option to delete the selected entity. The context menu can be opened via right click. Depending on type of the entity that will be deleted, additional entities will be affected by the delete operation.
+
+If the entity C is a category, all in C contained entities will be "moved up" in the tree (i.e., the super category of C will become the super category of entities contained in C).
+
+If the entity is an abstract phenotype, all restrictions on that entity will be deleted too.
