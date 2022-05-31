@@ -21,11 +21,11 @@ The TOP Framework enables users to model phenotypes according to the [Core Ontol
 ## Getting started
 Follow these instructions to set up the TOP framework:
 
-1. Clone the repository
+1. Clone this repository
 
         git clone https://github.com/Onto-Med/top-deployment.git
         cd top-deployment
-2. Copy `docker-compose.env.tpl` and modify it as needed
+2. Copy [docker-compose.env.tpl](docker-compose.env.tpl) and modify it as needed
 
         cp docker-compose.env.tpl docker-compose.env
 3. Log in to GitHub Container Registry with personal access token
@@ -34,6 +34,8 @@ Follow these instructions to set up the TOP framework:
 4. Use Docker Compose to startup the TOP Framework services
 
         docker compose up -d
+
+All data will be stored in the Docker volume `top-data` (see declaration at the end of [docker-compose.yml](docker-compose.yml)). Feel free to update this volume configuration (e.g., make it external or provide an absolute path on the host).
 
 ## About the project
 The TOP Framework is currently under heavy development. Do not use it in a production environment!
