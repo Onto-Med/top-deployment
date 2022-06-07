@@ -46,5 +46,5 @@ The Phenotype Editor has a special component to build boolean and mathematical e
 
 Entities are added by selecting "Entity" as expression part. You can then enter the name or synonym of the desired entity.
 
-![Update a single phenotype](../assets/images/phenotype-editor-single-phenotype.png)
+![Derived phenotype with expression](../assets/images/phenotype-editor-derived-phenotype.png)
 _Figure 3: A derived phenotype where the mathematical formula was built with the expression editor component._
