@@ -40,3 +40,11 @@ As shown in figure 1, the context menu of entities in the tree on the left site 
 If the entity C is a category, all in C contained entities will be "moved up" in the tree (i.e., the super category of C will become the super category of entities contained in C).
 
 If the entity is an abstract phenotype, all restrictions on that entity will be deleted too.
+
+## Expression editor
+The Phenotype Editor has a special component to build boolean and mathematical expressions (see figure 3). You can left click parts of an expression (i.e., entities, constants and operators) to open a small context menu. In this menu you can change the type of the part and remove or surround it with another operator. In case of entities, the context menu allows you to navigate to the definition of that entity.
+
+Entities are added by selecting "Entity" as expression part. You can then enter the name or synonym of the desired entity.
+
+![Update a single phenotype](../assets/images/phenotype-editor-single-phenotype.png)
+_Figure 3: A derived phenotype where the mathematical formula was built with the expression editor component._
