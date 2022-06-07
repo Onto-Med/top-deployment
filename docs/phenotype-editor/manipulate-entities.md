@@ -6,6 +6,13 @@ nav_order: 1
 ---
 
 # Manipulate Entities
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
 
 ## Create
 In order to create new entities (phenotypes or categories) you have to navigate to a repository, where new entities shall be stored in.
