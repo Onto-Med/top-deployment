@@ -38,9 +38,10 @@ services:
       - 443:443
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy-data:/data
     env_file:
       - docker-compose.env
 
 volumes:
   top-data:
-  caddy_data:
+  caddy-data:
