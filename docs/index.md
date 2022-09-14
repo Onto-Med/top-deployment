@@ -35,7 +35,8 @@ Follow these instructions to set up the TOP framework:
 
         docker compose up -d
 
-All data will be stored in the Docker volume `top-data` (see declaration at the end of [docker-compose.yml](docker-compose.yml)). Feel free to update this volume configuration (e.g., make it external or provide an absolute path on the host).
+All data will be stored in the Docker volume `top-data` (see declaration at the end of [docker-compose.yml](docker-compose.yml)).
+Feel free to update this volume configuration (e.g., make it external or provide an absolute path on the host).
 
 ## About the project
 The TOP Framework is currently under heavy development. Do not use it in a production environment!

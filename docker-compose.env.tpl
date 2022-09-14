@@ -6,6 +6,7 @@ DB_USER=neo4j
 DB_PASS=password
 NEO4J_AUTH=${DB_USER}/${DB_PASS}
 API_URL=${BASE_URL}/api
+DATA_SOURCE_CONFIG_DIR=/configs
 
 # If you want to protect both, front and backend with an authentication server, please use the image top-frontend:latest-auth and modify below variables
 OAUTH2_ENABLED=false

@@ -30,7 +30,21 @@ Follow these instructions to set up the TOP framework:
 All data will be stored in the Docker volume `top-data` (see declaration at the end of [docker-compose.yml](docker-compose.yml)).
 Feel free to update this volume configuration (e.g., make it external or provide an absolute path on the host).
 
-## Protection with OAuth2
+### Add Data Adapter Configurations
+You can create data adapter configuration files and mount them into the `backend` container by modifying [docker-compose.yml](docker-compose.yml). For a detailed specification of the configuration files, see [top-phenotypic-query](https://github.com/Onto-Med/top-phenotypic-query).
+
+```yml
+services:
+  backend:
+    # ...
+    volumes:
+      - top-data-adapter-configs:/configs
+volumes:
+  top-data-adapter-configs:
+    # volume settings
+```
+
+### Protection with OAuth2
 If you want to protect front and backend with OAuth2 authentication, you must set up a [Keycloak](https://hub.docker.com/r/jboss/keycloak/) server and use an "*-auth" variant of the top-frontend image.
 You may also need to modify the configurations in `docker-compose.env.tpl`.
 
