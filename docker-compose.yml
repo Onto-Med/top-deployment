@@ -2,11 +2,11 @@ version: '3.9'
 
 services:
   db:
-    image: neo4j
+    image: postgres
     restart: unless-stopped
     stop_grace_period: 1m30s
     volumes:
-      - top-data:/data
+      - top-data:/var/lib/postgresql/data
     env_file:
       - docker-compose.env
 
@@ -15,12 +15,12 @@ services:
     restart: unless-stopped
     depends_on:
       - db
-    env_file:
-      - docker-compose.env
     environment:
       - APP_PATH=/api
       - DB_HOST=db
-      - DB_PORT=7687
+      - DB_PORT=5432
+    env_file:
+      - docker-compose.env
 
   frontend:
     image: ghcr.io/onto-med/top-frontend
