@@ -16,7 +16,6 @@ services:
     depends_on:
       - db
     environment:
-      - APP_PATH=/api
       - DB_HOST=db
       - DB_PORT=5432
     env_file:
