@@ -3,6 +3,7 @@ layout: default
 title: User Manual
 nav_order: 2
 has_children: true
+permalink: /user-manual
 ---
 
 # User Manual

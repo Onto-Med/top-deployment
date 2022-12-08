@@ -4,6 +4,7 @@ title: Phenotype Editor
 parent: User Manual
 nav_order: 1
 has_children: true
+permalink: /user-manual/phenotype-editor
 ---
 
 # Phenotype Editor

@@ -4,6 +4,7 @@ title: Query Builder
 parent: User Manual
 nav_order: 2
 has_children: false
+permalink: /user-manual/query-builder
 ---
 
 # Query Builder
@@ -26,7 +27,7 @@ In order to access the query builder and start building your query, you first ha
 
 Click on the button "Build query" above the entity tree on the left side (see figure 1).
 
-!["Build query" button](../assets/images/query-builder-access.png)
+!["Build query" button](../../assets/images/query-builder-access.png)
 _Figure 1: Press the "Build query" button to open the query builder._
 
 ## Build a Query
@@ -37,28 +38,28 @@ In the first step you can define a name for the query and select one ore more da
 
 There is also an option to import a previously exported query setup.
 
-![General query configuration](../assets/images/query-builder-configuration.png)
+![General query configuration](../../assets/images/query-builder-configuration.png)
 _Figure 2: General configuration of a query._
 
 ### In- and Exclusion Criteria
 Left click on phenotypes in the tree on the left side to add them as inclusion criteria to your query. If you want to convert them to an exclusion criterion, you can use the sliders on front of each criteria. In the example in figure 3, the phenotype BMI has be marked as exclusion criterion. You can remove criteria by clicking the minus button behind each criteria.
 
-![Query criteria](../assets/images/query-builder-criteria.png)
+![Query criteria](../../assets/images/query-builder-criteria.png)
 _Figure 3: A simple selection of query criteria. BMI is an exclusion criterion._
 
 Advanced queries can be build by specifying age or time restrictions for criteria. For instance, you can query for subjects with height values in ranges 4-8 years **or** 12-16 years (see figure 4). You can also add multiple entries of a phenotype to the criteria list and specify different age/time ranges for each entry. In contrast to the example in figure 4, the ranges will then be concatenated with an and operator. For example, height values in ranges 4-8 years **and** 12-16 years.
 
-![Restrictions for criterion "height"](../assets/images/query-builder-criteria-restrictions.png)
+![Restrictions for criterion "height"](../../assets/images/query-builder-criteria-restrictions.png)
 _Figure 4: Example restrictions for criterion "height", they are concatenated with an or operator._
 
 ### Projection
 In the step "Define Result set" you can select phenotypes that you want to include in your result set ("projection"). For each projection entry you can select a sorting direction. The arrows in front of each entry are for rearranging the entries.
 
-![Example projection](../assets/images/query-builder-projection.png)
+![Example projection](../../assets/images/query-builder-projection.png)
 _Figure 5: Example projection on weight and BMI._
 
 ## Execute a Query
 In the step "Closure" you can select whether you want to export your current query settings for later use or execute the current query. If you execute the query, the result will be displayed below. You can adjust a query and execute it multiple times. All results will be listed below in chronological order.
 
-![Query closure](../assets/images/query-builder-closure.png)
+![Query closure](../../assets/images/query-builder-closure.png)
 _Figure 6: Query closure and execution._

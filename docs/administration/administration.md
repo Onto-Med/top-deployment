@@ -3,6 +3,7 @@ layout: default
 title: Administration
 nav_order: 3
 has_children: false
+permalink: /administration
 ---
 
 # Administration
