@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Query Builder
-nav_order: 3
+parent: User Manual
+nav_order: 2
 has_children: false
-permalink: query-builder
 ---
 
 # Query Builder
