@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Phenotype Editor
-nav_order: 2
+parent: User Manual
+nav_order: 1
 has_children: true
-permalink: phenotype-editor
 ---
 
 # Phenotype Editor
