@@ -59,6 +59,12 @@ Phenotypes are another one of the main components of the TOP Framework. We use t
 >
 > <small>_Scheuermann RH, Ceusters W, Smith B. Toward an ontological treatment of disease and diagnosis. Summit Transl Bioinform. 2009 Mar 1;2009:116-20. PMID: [21347182](https://pubmed.ncbi.nlm.nih.gov/21347182/); PMCID: [PMC3041577](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3041577/)._</small>
 
+The phenotypes you model in the TOP Framework are actually classes. The phenotypes of individuals (organisms, people, patients, ...) are members of these classes. For example, the height of the person John Doe is a member of the phenotype class 'Height' and has the value 180 centimetres.
+
+All phenotypes have the mandatory property 'data type', which can be one of numeric, date time, text and Boolean. numeric phenotypes may also have a unit of measurement, specified as [Unified Code for Units of Measure (UCUM)](https://ucum.org).
+
+We distinguish between single and composite phenotypes, which are described below.
+
 #### Single Phenotypes
 
 #### Composite Phenotypes
