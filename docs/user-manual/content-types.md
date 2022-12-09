@@ -65,13 +65,28 @@ Phenotypes are another one of the main components of the TOP Framework. We use t
 
 The phenotypes you model in the TOP Framework are actually classes. The phenotypes of individuals (organisms, people, patients, ...) are members of these classes. For example, the height of the person John Doe is a member of the phenotype class 'Height' and has the value 180 centimetres.
 
-All phenotypes have the mandatory property 'data type', which can be one of numeric, date time, text and Boolean. numeric phenotypes may also have a unit of measurement, specified as [Unified Code for Units of Measure (UCUM)](https://ucum.org).
+All phenotypes have the mandatory property 'data type', which can be one of numeric, date time, text and Boolean.
+Numeric phenotypes may also have a unit of measurement, specified as [Unified Code for Units of Measure (UCUM)](https://ucum.org).
 
 We distinguish between single and composite phenotypes, which are described below.
 
 #### Single Phenotypes
 
+Basic properties of individuals are modelled as single phenotypes. They can also be called 'atomic' or 'elemental', because of their indivisible nature.
+All single phenotypes should have at least one code associated with them, so that they can be mapped to individual data in any kind of data holding source system.
+
 #### Composite Phenotypes
+
+In contrast to single phenotypes, composite once are constructed from one or more single or composite phenotype or constant (arguments).
+This is done by applying functions (e.g., addition, subtraction, logical 'and' operation, etc.) that transform a set of input arguments to typically one value.
+
+**Example:**
+
+The expression if the phenotype 'BMI' (body mass index) could look like:
+
+```
+Weight [kg] / (Height [cm] / 100) ^ 2
+```
 
 #### Difference Between Unrestricted and Restricted Phenotypes
 
