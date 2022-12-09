@@ -17,7 +17,10 @@ This page contains detailed information about all content types, storable in the
 1. TOC
 {:toc}
 
+## Overview
+
 ![Hierarchy](../assets/images/content-type-hierarchy.png)
+
 _Figure 1: Hierarchy of the TOP Framework content types._
 
 ## Organisations
@@ -97,7 +100,7 @@ whereas restricted phenotypes have further restrictions that must be matched in 
 
 All possible heights of individuals are classified to the unrestricted phenotype 'Height' and only a portion of them are classified to the restricted phenotype 'Height > 200 cm'.
 
-## Phenotype Algorithm
+## Phenotype Algorithms
 
 Phenotype algorithms are depicted by a set of single and/or composite phenotypes. Typically there is a composite phenotype that references all other phenotypes in it's expression.
 To execute a phenotype algorithm, one has to provide data of an individual and evaluate all expressions and restrictions in the set.
