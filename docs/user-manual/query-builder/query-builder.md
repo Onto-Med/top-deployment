@@ -2,7 +2,7 @@
 layout: default
 title: Query Builder
 parent: User Manual
-nav_order: 2
+nav_order: 3
 has_children: false
 permalink: /user-manual/query-builder
 ---
