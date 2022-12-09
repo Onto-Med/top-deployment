@@ -49,7 +49,7 @@ Additionally, entities have the following properties in common:
 
 You can find more information about the different entity types and the underlying ontological model in our publication:
 
-> Uciteli A, Beger C, Kirsten T, Meineke FA, Herre H. Ontological representation, classification and data-driven computing of phenotypes. J Biomed Semantics. 2020 Dec 21;11(1):15. doi: [10.1186/s13326-020-00230-0](https://doi.org/10.1186/s13326-020-00230-0).
+> Uciteli A, Beger C, Kirsten T, Meineke FA, Herre H. Ontological Modelling and Reasoning of Phenotypes. CEUR Workshop Proceedings. 2019 Sep;2570. issn: 1613-0073. http://ceur-ws.org/Vol-2518/paper-ODLS11.pdf.
 
 ### Categories
 
@@ -59,9 +59,9 @@ Use categories to structure repositories. They are similar to folders in a file 
 
 Phenotypes are another one of the main components of the TOP Framework. We use the following definition for the term 'phenotype':
 
-> A (combination of) bodily feature(s) of an organism determined by the interaction of its genetic make-up and environment.
+> _"A (combination of) bodily feature(s) of an organism determined by the interaction of its genetic make-up and environment."_
 >
-> <small>_Scheuermann RH, Ceusters W, Smith B. Toward an ontological treatment of disease and diagnosis. Summit Transl Bioinform. 2009 Mar 1;2009:116-20. PMID: [21347182](https://pubmed.ncbi.nlm.nih.gov/21347182/); PMCID: [PMC3041577](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3041577/)._</small>
+> <small>Scheuermann RH, Ceusters W, Smith B. Toward an ontological treatment of disease and diagnosis. Summit Transl Bioinform. 2009 Mar 1;2009:116-20. PMID: [21347182](https://pubmed.ncbi.nlm.nih.gov/21347182/); PMCID: [PMC3041577](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3041577/).</small>
 
 The phenotypes you model in the TOP Framework are actually classes. The phenotypes of individuals (organisms, people, patients, ...) are members of these classes. For example, the height of the person John Doe is a member of the phenotype class 'Height' and has the value 180 centimetres.
 
@@ -94,6 +94,14 @@ Single and composite phenotypes can further be divided in unrestricted and restr
 whereas restricted phenotypes have further restrictions that must be matched in order for individual phenotypes to be classified to them.
 
 **Example:**
+
 All possible heights of individuals are classified to the unrestricted phenotype 'Height' and only a portion of them are classified to the restricted phenotype 'Height > 200 cm'.
 
 ## Phenotype Algorithm
+
+Phenotype algorithms are depicted by a set of single and/or composite phenotypes. Typically there is a composite phenotype that references all other phenotypes in it's expression.
+To execute a phenotype algorithm, one has to provide data of an individual and evaluate all expressions and restrictions in the set.
+
+There is an extensive example for an algorithm to detect _Diabetes Mellitus Type 2_ available in:
+
+> Uciteli A, Beger C, Kirsten T, Meineke FA, Herre H. Ontological representation, classification and data-driven computing of phenotypes. J Biomed Semantics. 2020 Dec 21;11(1):15. doi: [10.1186/s13326-020-00230-0](https://doi.org/10.1186/s13326-020-00230-0).
