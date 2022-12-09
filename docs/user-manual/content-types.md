@@ -17,16 +17,52 @@ This page contains detailed information about all content types, storable in the
 1. TOC
 {:toc}
 
+![Hierarchy](../assets/images/content-type-hierarchy.png)
+_Figure 1: Hierarchy of the TOP Framework content types._
+
 ## Organisations
+
+Organisations can be used to store research groups, institutions or (scientific) projects. They can further be structured by specifying super organisations.
 
 ## Repositories
 
+Repositories are one of the main components of the TOP Framework. They hold all all types of entities.
+
+We recommend you to create a repository for each [phenotype algorithm](#phenotype-algorithm) you want to model.
+By capsulising algorithms that way, you make sure that they are more comprehensible and can be find easily.
+
 ## Entities
 
-## Categories
+The term 'entity' is a generic term to express all content types listed below.
 
-## Phenotypes
+These content types have in common that they can be referenced by URLs (deep links) and they are versioned.
+You can always switch between versions and restore previous once.
+More details about versioning are described [here](phenotype-editor/versioning).
 
-### Single Phenotypes
+Additionally, entities have the following properties in common:
 
-### Composite Phenotypes
+* unique identifier
+* multilingual titles, there can only be one title per language
+* multilingual synonyms
+* multilingual descriptions/definitions
+* codes of standard terminologies, like [LOINC](https://loinc.org), [SNOMED CT](https://www.snomed.org), etc.
+
+### Categories
+
+Use categories to structure repositories. They are similar to folders in a file system and serve no other purpose than organising content.
+
+### Phenotypes
+
+Phenotypes are another one of the main components of the TOP Framework. We use the following definition for the term 'phenotype':
+
+> A (combination of) bodily feature(s) of an organism determined by the interaction of its genetic make-up and environment.
+>
+> <small>_Scheuermann RH, Ceusters W, Smith B. Toward an ontological treatment of disease and diagnosis. Summit Transl Bioinform. 2009 Mar 1;2009:116-20. PMID: [21347182](https://pubmed.ncbi.nlm.nih.gov/21347182/); PMCID: [PMC3041577](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3041577/)._</small>
+
+#### Single Phenotypes
+
+#### Composite Phenotypes
+
+#### Difference Between Unrestricted and Restricted Phenotypes
+
+## Phenotype Algorithm
