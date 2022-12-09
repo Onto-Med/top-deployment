@@ -47,6 +47,10 @@ Additionally, entities have the following properties in common:
 * multilingual descriptions/definitions
 * codes of standard terminologies, like [LOINC](https://loinc.org), [SNOMED CT](https://www.snomed.org), etc.
 
+You can find more information about the different entity types and the underlying ontological model in our publication:
+
+> Uciteli A, Beger C, Kirsten T, Meineke FA, Herre H. Ontological representation, classification and data-driven computing of phenotypes. J Biomed Semantics. 2020 Dec 21;11(1):15. doi: [10.1186/s13326-020-00230-0](https://doi.org/10.1186/s13326-020-00230-0).
+
 ### Categories
 
 Use categories to structure repositories. They are similar to folders in a file system and serve no other purpose than organising content.
