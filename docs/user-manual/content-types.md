@@ -90,4 +90,10 @@ Weight [kg] / (Height [cm] / 100) ^ 2
 
 #### Difference Between Unrestricted and Restricted Phenotypes
 
+Single and composite phenotypes can further be divided in unrestricted and restricted phenotypes. Unrestricted phenotypes represent all possible phenotypes of individuals,
+whereas restricted phenotypes have further restrictions that must be matched in order for individual phenotypes to be classified to them.
+
+**Example:**
+All possible heights of individuals are classified to the unrestricted phenotype 'Height' and only a portion of them are classified to the restricted phenotype 'Height > 200 cm'.
+
 ## Phenotype Algorithm
