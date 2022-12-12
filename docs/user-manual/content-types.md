@@ -39,7 +39,7 @@ By capsulising algorithms that way, you make sure that they are more comprehensi
 The term 'entity' is a generic term to express all content types listed below.
 
 These content types have in common that they can be referenced by URLs (deep links) and they are versioned.
-You can always switch between versions and restore previous once.
+You can always switch between versions and restore previous ones.
 More details about versioning are described [here](phenotype-editor/versioning).
 
 Additionally, entities have the following properties in common:
@@ -80,12 +80,12 @@ All single phenotypes should have at least one code associated with them, so tha
 
 #### Composite Phenotypes
 
-In contrast to single phenotypes, composite once are constructed from one or more single or composite phenotype or constant (arguments).
+In contrast to single phenotypes, composite ones are constructed from one or more single or composite phenotype or constant (arguments).
 This is done by applying functions (e.g., addition, subtraction, logical 'and' operation, etc.) that transform a set of input arguments to typically one value.
 
 **Example:**
 
-The expression if the phenotype 'BMI' (body mass index) could look like:
+The expression of the phenotype 'BMI' (body mass index) could look like:
 
 ```
 Weight [kg] / (Height [cm] / 100) ^ 2
