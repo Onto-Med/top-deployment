@@ -10,6 +10,15 @@ services:
     env_file:
       - docker-compose.env
 
+  neo4j:
+    image: neo4j
+    restart: unless-stopped
+    stop_grace_period: 1m30s
+    volumes:
+      - top-neo4j-data:/data
+    env_file:
+      - docker-compose.env
+
   backend:
     image: ghcr.io/onto-med/top-backend
     restart: unless-stopped
@@ -43,4 +52,5 @@ services:
 
 volumes:
   top-data:
+  top-neo4j-data:
   caddy-data:
