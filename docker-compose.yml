@@ -27,6 +27,8 @@ services:
     environment:
       - DB_HOST=db
       - DB_PORT=5432
+      - DB_NEO4J_HOST=neo4j
+      - DB_NEO4J_PORT=7687
     env_file:
       - docker-compose.env
 

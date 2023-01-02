@@ -6,8 +6,8 @@ APP_PATH=/api
 DB_NAME=postgres
 DB_USER=postgres
 DB_PASS=password # You should change this value!
-NEO4J_USER=neo4j
-NEO4J_PASS=password # You should change this value!
+DB_NEO4J_USER=neo4j
+DB_NEO4J_PASS=password # You should change this value!
 API_URL=${BASE_URL}${APP_PATH}
 DATA_SOURCE_CONFIG_DIR=/configs
 
@@ -17,7 +17,7 @@ POSTGRES_USER=${DB_USER}
 POSTGRES_PASSWORD=${DB_PASS}
 
 # Neo4J settings
-NEO4J_AUTH=${NEO4J_USER}/${NEO4J_PASS}
+NEO4J_AUTH=${DB_NEO4J_USER}/${DB_NEO4J_PASS}
 
 # If you want to protect both, front and backend with an authentication server, please use the image top-frontend:latest-auth and modify below variables
 OAUTH2_ENABLED=false
