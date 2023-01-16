@@ -31,6 +31,23 @@ Follow these instructions to set up the TOP framework:
 All data will be stored in the Docker volume `top-data` (see declaration at the end of [docker-compose.yml](docker-compose.yml)).
 Feel free to update this volume configuration (e.g., make it external or provide an absolute path on the host).
 
+### Add Plugins
+Plugins can be provided as JAR files (dependencies must be included too, see for example [Apache Maven Assembly Plugin](https://maven.apache.org/plugins/maven-assembly-plugin/usage.html)).
+You just have to place those JAR files in a directory and mount it to `\plugins` directory of the backend container.
+
+```yml
+services:
+  backend:
+    # ...
+    volumes:
+      - top-plugins-dir:/plugins
+  volumes:
+    top-plugins-dir:
+      # volume settings
+```
+
+More information about backend plugins is available at https://github.com/Onto-Med/top-backend#plugins.
+
 ### Add Data Adapter Configurations
 You can create data adapter configuration files and mount them into the `backend` container by modifying [docker-compose.yml](docker-compose.yml). For a detailed specification of the configuration files, see [top-phenotypic-query](https://github.com/Onto-Med/top-phenotypic-query).
 
