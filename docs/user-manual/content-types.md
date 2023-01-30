@@ -29,10 +29,21 @@ Organisations can be used to store research groups, institutions or (scientific)
 
 ## Repositories
 
-Repositories are one of the main components of the TOP Framework. They hold all all types of entities.
+Repositories are one of the main components of the TOP Framework. Depending on their type, repositories can hold different entity types.
+We distinguish between the following types:
 
-We recommend you to create a repository for each [phenotype algorithm](#phenotype-algorithm) you want to model.
+### Phenotype repository
+
+In this type of repository, one can store phenotype definitions.
+
+We recommend you to create a phenotype repository for each [phenotype algorithm](#phenotype-algorithm) you want to model.
 By capsulising algorithms that way, you make sure that they are more comprehensible and can be find easily.
+
+### Concept repository
+
+In contrast to the phenotype repository type, this type can only hold concepts.
+The purpose if this repository type is to build a collection of concepts that can be used to query for specific information, contents or documents.
+Consider a large indexed set of documents, one wants to search for a subset that addresses some topic.
 
 ## Entities
 
@@ -54,7 +65,7 @@ You can find more information about the different entity types and the underlyin
 
 > Uciteli A, Beger C, Kirsten T, Meineke FA, Herre H. Ontological Modelling and Reasoning of Phenotypes. CEUR Workshop Proceedings. 2019 Sep;2570. issn: 1613-0073. http://ceur-ws.org/Vol-2518/paper-ODLS11.pdf.
 
-### Categories
+### Categories and Concepts
 
 Use categories to structure repositories. They are similar to folders in a file system and serve no other purpose than organising content.
 
