@@ -10,6 +10,8 @@ The TOP Framework consists of:
 ## State of the Project
 The TOP Framework is currently under heavy development. Do not use it in a production environment!
 
+A public demo instance is available at: https://top.imise.uni-leipzig.de
+
 ## Usage
 See https://onto-med.github.io/top-deployment.
 
