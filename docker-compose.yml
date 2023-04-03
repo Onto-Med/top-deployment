@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   db:
-    image: postgres
+    image: postgres:15
     restart: unless-stopped
     stop_grace_period: 1m30s
     volumes:
@@ -11,7 +11,7 @@ services:
       - docker-compose.env
 
   neo4j:
-    image: neo4j
+    image: neo4j:5
     restart: unless-stopped
     stop_grace_period: 1m30s
     volumes:
@@ -20,7 +20,7 @@ services:
       - docker-compose.env
 
   backend:
-    image: ghcr.io/onto-med/top-backend
+    image: ghcr.io/onto-med/top-backend:latest
     restart: unless-stopped
     depends_on:
       - db
@@ -33,7 +33,7 @@ services:
       - docker-compose.env
 
   frontend:
-    image: ghcr.io/onto-med/top-frontend
+    image: ghcr.io/onto-med/top-frontend:latest-auth
     restart: unless-stopped
     depends_on:
       - backend
@@ -41,7 +41,7 @@ services:
       - docker-compose.env
 
   caddy:
-    image: caddy:alpine
+    image: caddy:2-alpine
     restart: unless-stopped
     ports:
       - 80:80
@@ -52,7 +52,30 @@ services:
     env_file:
       - docker-compose.env
 
+  keycloak:
+    image: jboss/keycloak:16.1.1
+    restart: unless-stopped
+    depends_on:
+      - keycloak-db
+    environment:
+      - DB_VENDOR=postgres
+      - DB_ADDR=keycloak-db
+      - DB_USER=keycloak
+      - DB_PASSWORD=keycloak
+
+  keycloak-db:
+    image: postgres:15
+    restart: unless-stopped
+    stop_grace_period: 1m30s
+    volumes:
+      - keycloak-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=keycloak
+      - POSTGRES_USER=keycloak
+      - POSTGRES_PASSWORD=keycloak
+
 volumes:
   top-data:
   top-neo4j-data:
   caddy-data:
+  keycloak-data:
