@@ -20,7 +20,7 @@ services:
       - docker-compose.env
 
   backend:
-    image: ghcr.io/onto-med/top-backend
+    image: ghcr.io/onto-med/top-backend:latest
     restart: unless-stopped
     depends_on:
       - db
@@ -33,7 +33,7 @@ services:
       - docker-compose.env
 
   frontend:
-    image: ghcr.io/onto-med/top-frontend
+    image: ghcr.io/onto-med/top-frontend:latest-auth
     restart: unless-stopped
     depends_on:
       - backend
@@ -62,7 +62,7 @@ services:
       - DB_ADDR=keycloak-db
       - DB_USER=keycloak
       - DB_PASSWORD=keycloak
-  
+
   keycloak-db:
     image: postgres:15
     restart: unless-stopped
