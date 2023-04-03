@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   db:
-    image: postgres
+    image: postgres:15
     restart: unless-stopped
     stop_grace_period: 1m30s
     volumes:
@@ -11,7 +11,7 @@ services:
       - docker-compose.env
 
   neo4j:
-    image: neo4j
+    image: neo4j:5
     restart: unless-stopped
     stop_grace_period: 1m30s
     volumes:
@@ -41,7 +41,7 @@ services:
       - docker-compose.env
 
   caddy:
-    image: caddy:alpine
+    image: caddy:2-alpine
     restart: unless-stopped
     ports:
       - 80:80
@@ -53,7 +53,7 @@ services:
       - docker-compose.env
 
   keycloak:
-    image: jboss/keycloak
+    image: jboss/keycloak:16.1.1
     restart: unless-stopped
     depends_on:
       - keycloak-db
@@ -64,7 +64,7 @@ services:
       - DB_PASSWORD=keycloak
   
   keycloak-db:
-    image: postgres
+    image: postgres:15
     restart: unless-stopped
     stop_grace_period: 1m30s
     volumes:
