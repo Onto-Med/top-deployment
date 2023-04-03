@@ -63,19 +63,12 @@ volumes:
 ```
 
 ### Protection with OAuth2
-If you want to protect front and backend with OAuth2 authentication, you must set up a [Keycloak](https://hub.docker.com/r/jboss/keycloak/) server and use an "*-auth" variant of the top-frontend image.
+If you want to protect front and backend with OAuth2 authentication, you must set up a [Keycloak](https://hub.docker.com/r/jboss/keycloak/) server and use an "*-auth" variant of the top-frontend image. Respective Keycloak containers are already included in the [docker-compose.yml](docker-compose.yml) file.
+
 You may also need to modify the configurations in `docker-compose.env.tpl`.
-
-Example Keycloak startup:
-
-```bash
-docker run -p 8081:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin quay.io/keycloak/keycloak:18.0.0 --spi-login-protocol-openid-connect-legacy-logout-redirect-uri=true start-dev
-```
 
 After starting Keycloak, log in with admin credentials and perform the following tasks:
 1. Create a new realm (e.g.: "top-realm")
 2. Create a new client for that realm (e.g.: "top-frontend"). Make sure to modify the URLs in the client configuration to match your TOP Frontend instance.
 
 The TOP Frontend should now display a login button in the top right corner. If a visitor clicks on that button he will be redirected to the Keycloak login page. After a successful login he will be redirected back to the TOP Frontend.
-
-At it's current state the TOP Framework does not have a permission system, which means that all users with valid accounts are able to access and manipulate all content. In a future update we will modify the connection to Keycloak, so that administrators can define their own permissions in Keycloak.
