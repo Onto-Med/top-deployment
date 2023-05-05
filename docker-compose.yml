@@ -29,6 +29,7 @@ services:
       - DB_PORT=5432
       - DB_NEO4J_HOST=neo4j
       - DB_NEO4J_PORT=7687
+      - OAUTH2_URL=http://keycloak:8080/auth
     env_file:
       - docker-compose.env
 
