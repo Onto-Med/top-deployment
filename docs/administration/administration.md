@@ -67,6 +67,13 @@ If you want to protect front and backend with OAuth2 authentication, you must se
 
 You may also need to modify the configurations in `docker-compose.env.tpl`.
 
+If Keycloak is run fpr the first time, you need to create an admin account:
+
+```sh
+docker compose exec keycloak /opt/jboss/keycloak/bin/add-user-keycloak.sh -u <USERNAME> -p <PASSWORD>
+docker compose restart keycloak
+```
+
 After starting Keycloak, log in with admin credentials and perform the following tasks:
 1. Create a new realm (e.g.: "top-realm")
 2. Create a new client for that realm (e.g.: "top-frontend"). Make sure to modify the URLs in the client configuration to match your TOP Frontend instance.
