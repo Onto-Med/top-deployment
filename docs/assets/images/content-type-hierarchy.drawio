@@ -1,10 +1,10 @@
 <mxfile host="65bd71144e">
     <diagram id="9gCpoze4Ezko7_gkgvhH" name="Seite-1">
-        <mxGraphModel dx="1054" dy="792" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1130" dy="789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="7" value="Entities" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=2;labelPosition=center;verticalLabelPosition=middle;align=left;verticalAlign=middle;spacingLeft=14;dashed=1;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="7" value="Entities" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=2;labelPosition=center;verticalLabelPosition=middle;align=left;verticalAlign=middle;spacingLeft=14;dashed=1;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="80" y="370" width="530" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="IsHN5u6iE1gPFRgJ8gi5-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="IsHN5u6iE1gPFRgJ8gi5-1" target="IsHN5u6iE1gPFRgJ8gi5-4" edge="1">
@@ -99,8 +99,28 @@
                 <mxCell id="2" value="Concept&lt;br&gt;Repositories" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="160" y="280" width="120" height="60" as="geometry"/>
                 </mxCell>
+                <mxCell id="10" style="edgeStyle=none;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;rounded=0;" edge="1" parent="1" source="3" target="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="190" y="510"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" style="edgeStyle=none;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;rounded=0;" edge="1" parent="1" source="3" target="9">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="190" y="610"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="3" value="Concepts" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="160" y="380" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Single Concept" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="480" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Composite Concept" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="580" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
