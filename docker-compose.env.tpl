@@ -22,7 +22,7 @@ POSTGRES_PASSWORD=${DB_PASS}
 # Neo4J settings
 NEO4J_AUTH=${DB_NEO4J_USER}/${DB_NEO4J_PASS}
 
-# If you want to protect both, front and backend with an authentication server, please use the image top-frontend:latest-auth and modify below variables
+# If you want to protect both, front and backend with an authentication server, please modify below variables
 OAUTH2_ENABLED=true
 OAUTH2_URL=http://127.0.0.1/auth
 OAUTH2_REALM=top-realm
