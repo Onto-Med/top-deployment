@@ -58,6 +58,8 @@ services:
 
   keycloak:
     image: jboss/keycloak:16.1.1
+    profiles:
+      - auth
     restart: unless-stopped
     depends_on:
       - keycloak-db
@@ -69,6 +71,8 @@ services:
 
   keycloak-db:
     image: postgres:15
+    profiles:
+      - auth
     restart: unless-stopped
     stop_grace_period: 1m30s
     volumes:

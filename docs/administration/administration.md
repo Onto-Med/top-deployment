@@ -63,11 +63,12 @@ volumes:
 ```
 
 ### Protection with OAuth2
-If you want to protect front and backend with OAuth2 authentication, you must set up a [Keycloak](https://hub.docker.com/r/jboss/keycloak/) server and use an "*-auth" variant of the top-frontend image. Respective Keycloak containers are already included in the [docker-compose.yml](docker-compose.yml) file.
+If you want to protect front and backend with OAuth2 authentication, you must set up a [Keycloak](https://hub.docker.com/r/jboss/keycloak/) server.
+Respective Keycloak containers are already included in the [docker-compose.yml](docker-compose.yml) file (use docker compose profile "auth", e.g.: `docker compose --profile auth up -d`).
 
 You may also need to modify the configurations in `docker-compose.env.tpl`.
 
-If Keycloak is run fpr the first time, you need to create an admin account:
+If Keycloak is run for the first time, you need to create an admin account:
 
 ```sh
 docker compose exec keycloak /opt/jboss/keycloak/bin/add-user-keycloak.sh -u <USERNAME> -p <PASSWORD>
@@ -78,4 +79,5 @@ After starting Keycloak, log in with admin credentials and perform the following
 1. Create a new realm (e.g.: "top-realm")
 2. Create a new client for that realm (e.g.: "top-frontend"). Make sure to modify the URLs in the client configuration to match your TOP Frontend instance.
 
-The TOP Frontend should now display a login button in the top right corner. If a visitor clicks on that button he will be redirected to the Keycloak login page. After a successful login he will be redirected back to the TOP Frontend.
+The TOP Frontend should now display a login button in the top right corner. If a visitor clicks on that button he will be redirected to the Keycloak login page.
+After a successful login he will be redirected back to the TOP Frontend.
