@@ -5,6 +5,7 @@ services:
     image: postgres:15
     restart: unless-stopped
     stop_grace_period: 1m30s
+    shm_size: 1g
     volumes:
       - top-data:/var/lib/postgresql/data
     env_file:
