@@ -25,41 +25,47 @@ Queries can be executed against one or more data sources to get result sets with
 ## Access the Query Builder
 In order to access the query builder and start building your query, you first have to navigate to the repository from which you want to build the query.
 
-Click on the button "Build query" above the entity tree on the left side (see figure 1).
+Click on the button above the entity tree on the left side as shown in figure 1.
 
 !["Build query" button](../../assets/images/query-builder-access.png)
-_Figure 1: Press the "Build query" button to open the query builder._
+_Figure 1: Press the top right button to open the query builder._
 
 ## Build a Query
-The query building is divided in multiple steps, which will be described in the next few sections.
+The query building is divided in multiple sections, which will be described here. All mandatory configurations are marked with red exclamation marks.
 
 ### General Configuration
-In the first step you can define a name for the query and select one ore more data sources, on which you want to perform the query.
+In the first section you can define a name for the query and select one or more data sources, on which you want to perform the query.
 
 There is also an option to import a previously exported query setup.
 
 ![General query configuration](../../assets/images/query-builder-configuration.png)
 _Figure 2: General configuration of a query._
 
-### In- and Exclusion Criteria
-Left click on phenotypes in the tree on the left side to add them as inclusion criteria to your query. If you want to convert them to an exclusion criterion, you can use the sliders on front of each criteria. In the example in figure 3, the phenotype BMI has be marked as exclusion criterion. You can remove criteria by clicking the minus button behind each criteria.
+### Projection and Eligibility Criteria
 
-![Query criteria](../../assets/images/query-builder-criteria.png)
-_Figure 3: A simple selection of query criteria. BMI is an exclusion criterion._
+* **Projection:** list of phenotypes to be included in the result set
+* **Eligibility criteria:** list of phenotypes to be applied as in or exclusion criteria (only phenotypes with Boolean data type and restricted phenotypes are allowed)
 
-Advanced queries can be build by specifying age or time restrictions for criteria. For instance, you can query for subjects with height values in ranges 4-8 years **or** 12-16 years (see figure 4). You can also add multiple entries of a phenotype to the criteria list and specify different age/time ranges for each entry. In contrast to the example in figure 4, the ranges will then be concatenated with an and operator. For example, height values in ranges 4-8 years **and** 12-16 years.
+Left click on phenotypes in the tree on the left side to add them as projection and eligibility criteria to your query.
+You can also perform a right click on phenotypes in the tree to specify whether they should be added to the projection or criteria list.
+If you want to convert a criterion to an exclusion criterion, you can use the sliders in front of each criteria. In the example in figure 3,
+the phenotype "Sex: Male" has been marked as exclusion criterion. You can remove projections and criteria by clicking the minus button behind each entry.
 
-![Restrictions for criterion "height"](../../assets/images/query-builder-criteria-restrictions.png)
-_Figure 4: Example restrictions for criterion "height", they are concatenated with an or operator._
+![Projection and eligibility criteria](../../assets/images/query-builder-projection-eligibility-criteria.png)
+_Figure 3: A simple query with projection and criteria. "Sex: Male" is an exclusion criterion._
 
-### Projection
-In the step "Define Result set" you can select phenotypes that you want to include in your result set ("projection"). For each projection entry you can select a sorting direction. The arrows in front of each entry are for rearranging the entries.
+Advanced queries can be build by specifying time restrictions for criteria. For instance, you can query for subjects with height values in range 2022-05-11 22:33 and
+2023-06-19 10:32 (see figure 4). You can also add multiple entries of a phenotype to the projection or criteria list and specify different time ranges for each entry.
 
-![Example projection](../../assets/images/query-builder-projection.png)
-_Figure 5: Example projection on weight and BMI._
+![Restrictions for criterion "height"](../../assets/images/query-builder-time-restriction.png)
+_Figure 4: Example restrictions of a criterion._
 
-## Execute a Query
-In the step "Closure" you can select whether you want to export your current query settings for later use or execute the current query. If you execute the query, the result will be displayed below. You can adjust a query and execute it multiple times. All results will be listed below in chronological order.
+If your query contains a composite phenotype, you must specify a default aggregation function. This function is used to aggregate multiple phenotype values to one value
+and to be able to use it for calculations
 
-![Query closure](../../assets/images/query-builder-closure.png)
-_Figure 6: Query closure and execution._
+## Query Execution and Results
+If you have finished the query specification, click "Execute" to enqueue the query. When the execution has finished, the result is shown in the "Previous queries" section.
+You can adjust a query and execute it multiple times and there is also an option to download the result set (must be enabled by administrators).
+
+![Query closure](../../assets/images/query-builder-result.png)
+_Figure 6: Previous queries section with buttons to download result sets, reuse a query, and delete a query._
