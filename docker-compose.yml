@@ -25,6 +25,8 @@ services:
     restart: unless-stopped
     depends_on:
       - db
+    volumes:
+      - query-results:/data/query_results
     environment:
       - DB_HOST=db
       - DB_PORT=5432
@@ -81,3 +83,4 @@ volumes:
   top-neo4j-data:
   caddy-data:
   keycloak-data:
+  query-results:
