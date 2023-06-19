@@ -10,6 +10,9 @@ DB_NEO4J_USER=neo4j
 DB_NEO4J_PASS=password # You should change this value!
 API_URL=${BASE_URL}${APP_PATH}
 DATA_SOURCE_CONFIG_DIR=/configs
+GDPR_NOTICE=false
+GDPR_POLICY_URL=
+SYSTEM_NOTICE=
 
 # PostgreSQL settings
 POSTGRES_DB=${DB_NAME}
