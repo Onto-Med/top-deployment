@@ -68,4 +68,4 @@ If you have finished the query specification, click "Execute" to enqueue the que
 You can adjust a query and execute it multiple times and there is also an option to download the result set (must be enabled by administrators).
 
 ![Query closure](../../assets/images/query-builder-result.png)
-_Figure 6: Previous queries section with buttons to download result sets, reuse a query, and delete a query._
+_Figure 5: Previous queries section with buttons to download result sets, reuse a query, and delete a query._
