@@ -20,8 +20,10 @@ Terminology- and Ontology-based Phenotyping Framework
 
 The TOP Framework enables users to model phenotypes according to the [Core Ontology of Phenotypes](https://github.com/Onto-Med/COP). It also includes a custom reasoning engine and query service for classification of individual data and searching in data repositories (e.g., Health Data Stores).
 
-## About the project
-The TOP Framework is currently under heavy development. Do not use it in a production environment!
+## State of the Project
+The TOP Framework is currently under heavy development. Usage in a production environment is not yet recommended.
 
-### License
-The source code of the TOP Framework components is currently closed source and not licensed for distribution or use.
+A public demo instance is available at: https://top.imise.uni-leipzig.de
+
+## License
+The TOP Framework is licensed under the [MIT license](LICENSE).
