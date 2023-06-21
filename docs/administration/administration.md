@@ -9,8 +9,6 @@ permalink: /administration
 # Administration
 {: .no_toc }
 
-{: .fs-6 .fw-300 }
-
 The TOP Framework consists of:
 
 * **Frontend:** [Vue.js](https://vuejs.org) and [Quasar](https://quasar.dev) based Single-Page Application ([top-frontend](https://github.com/Onto-Med/top-frontend))
@@ -23,7 +21,7 @@ Follow these instructions to set up the TOP framework:
 
         git clone https://github.com/Onto-Med/top-deployment.git
         cd top-deployment
-2. Copy [docker-compose.env.tpl](docker-compose.env.tpl) and modify it as needed
+2. Copy [docker-compose.env.tpl](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.env.tpl) and modify it as needed
 
         cp docker-compose.env.tpl docker-compose.env
 3. Log in to GitHub Container Registry with personal access token
@@ -33,7 +31,7 @@ Follow these instructions to set up the TOP framework:
 
         docker compose up -d
 
-All data will be stored in the Docker volume `top-data` (see declaration at the end of [docker-compose.yml](docker-compose.yml)).
+All data will be stored in the Docker volume `top-data` (see declaration at the end of [docker-compose.yml](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.yml)).
 Feel free to update this volume configuration (e.g., make it external or provide an absolute path on the host).
 
 ### Add Plugins
@@ -54,7 +52,7 @@ services:
 More information about backend plugins is available at the [top-backend documentation](https://github.com/Onto-Med/top-backend#plugins).
 
 ### Add Data Adapter Configurations
-You can create data adapter configuration files and mount them into the `backend` container by modifying [docker-compose.yml](docker-compose.yml). For a detailed specification of the configuration files, see [top-phenotypic-query](https://github.com/Onto-Med/top-phenotypic-query).
+You can create data adapter configuration files and mount them into the `backend` container by modifying [docker-compose.yml](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.yml). For a detailed specification of the configuration files, see [top-phenotypic-query](https://github.com/Onto-Med/top-phenotypic-query).
 
 ```yml
 services:
@@ -69,7 +67,7 @@ volumes:
 
 ### Protection with OAuth2
 If you want to protect front and backend with OAuth2 authentication, you must set up a [Keycloak](https://hub.docker.com/r/jboss/keycloak/) server.
-Respective Keycloak containers are already included in the [docker-compose.yml](docker-compose.yml) file (use docker compose profile "auth", e.g.: `docker compose --profile auth up -d`).
+Respective Keycloak containers are already included in the [docker-compose.yml](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.yml) file (use docker compose profile "auth", e.g.: `docker compose --profile auth up -d`).
 
 You may also need to modify the configurations in `docker-compose.env.tpl`.
 
