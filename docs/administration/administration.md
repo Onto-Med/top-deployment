@@ -79,5 +79,5 @@ After starting Keycloak, log in with admin credentials and perform the following
 1. Create a new realm (e.g.: "top-realm")
 2. Create a new client for that realm (e.g.: "top-frontend"). Make sure to modify the URLs in the client configuration to match your TOP Frontend instance.
 
-The TOP Frontend should now display a login button in the top right corner. If a visitor clicks on that button he will be redirected to the Keycloak login page.
-After a successful login he will be redirected back to the TOP Frontend.
+The TOP Frontend should now display a login button in the top right corner. If a visitor clicks on that button they will be redirected to the Keycloak login page.
+After a successful login they will be redirected back to the TOP Frontend.
