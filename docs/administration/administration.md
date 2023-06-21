@@ -11,6 +11,11 @@ permalink: /administration
 
 {: .fs-6 .fw-300 }
 
+The TOP Framework consists of:
+
+* **Frontend:** [Vue.js](https://vuejs.org) and [Quasar](https://quasar.dev) based Single-Page Application ([top-frontend](https://github.com/Onto-Med/top-frontend))
+* **Backend:** [Spring Boot Resource Server](https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/index.html) ([top-backend](https://github.com/Onto-Med/top-backend))
+
 ## Getting started
 Follow these instructions to set up the TOP framework:
 
