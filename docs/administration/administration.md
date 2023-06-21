@@ -11,6 +11,11 @@ permalink: /administration
 
 {: .fs-6 .fw-300 }
 
+The TOP Framework consists of:
+
+* **Frontend:** [Vue.js](https://vuejs.org) and [Quasar](https://quasar.dev) based Single-Page Application ([top-frontend](https://github.com/Onto-Med/top-frontend))
+* **Backend:** [Spring Boot Resource Server](https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/index.html) ([top-backend](https://github.com/Onto-Med/top-backend))
+
 ## Getting started
 Follow these instructions to set up the TOP framework:
 
@@ -46,7 +51,7 @@ services:
       # volume settings
 ```
 
-More information about backend plugins is available at https://github.com/Onto-Med/top-backend#plugins.
+More information about backend plugins is available at the [top-backend documentation](https://github.com/Onto-Med/top-backend#plugins).
 
 ### Add Data Adapter Configurations
 You can create data adapter configuration files and mount them into the `backend` container by modifying [docker-compose.yml](docker-compose.yml). For a detailed specification of the configuration files, see [top-phenotypic-query](https://github.com/Onto-Med/top-phenotypic-query).
@@ -79,5 +84,5 @@ After starting Keycloak, log in with admin credentials and perform the following
 1. Create a new realm (e.g.: "top-realm")
 2. Create a new client for that realm (e.g.: "top-frontend"). Make sure to modify the URLs in the client configuration to match your TOP Frontend instance.
 
-The TOP Frontend should now display a login button in the top right corner. If a visitor clicks on that button he will be redirected to the Keycloak login page.
-After a successful login he will be redirected back to the TOP Frontend.
+The TOP Frontend should now display a login button in the top right corner. If a visitor clicks on that button they will be redirected to the Keycloak login page.
+After a successful login they will be redirected back to the TOP Frontend.
