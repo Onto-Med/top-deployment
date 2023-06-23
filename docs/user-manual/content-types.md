@@ -65,9 +65,13 @@ You can find more information about the different entity types and the underlyin
 
 > Uciteli A, Beger C, Kirsten T, Meineke FA, Herre H. Ontological Modelling and Reasoning of Phenotypes. CEUR Workshop Proceedings. 2019 Sep;2570. issn: 1613-0073. http://ceur-ws.org/Vol-2518/paper-ODLS11.pdf.
 
-### Categories and Concepts
+### Categories
 
 Use categories to structure repositories. They are similar to folders in a file system and serve no other purpose than organising content.
+
+### Concepts
+
+TODO
 
 ### Phenotypes
 
