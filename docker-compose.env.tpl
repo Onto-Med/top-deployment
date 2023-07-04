@@ -1,5 +1,5 @@
 # Caddy settings:
-BASE_URL=http://127.0.0.1
+BASE_URL=localhost, 127.0.0.1
 APP_PATH=/api
 
 # TOP Framework related settings:
