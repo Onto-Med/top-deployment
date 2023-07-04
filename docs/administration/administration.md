@@ -28,6 +28,9 @@ Follow these instructions to set up the TOP framework:
 
         docker compose up -d
 
+If you didn't modify docker-compose.env, you can now access the framework at <https://localhost> in your browser.
+You may need to accept a Caddy certificate on the first access of this site.
+
 All data will be stored in the Docker volume `top-data` (see declaration at the end of [docker-compose.yml](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.yml)).
 Feel free to update this volume configuration (e.g., make it external or provide an absolute path on the host).
 
