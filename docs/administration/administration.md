@@ -24,10 +24,7 @@ Follow these instructions to set up the TOP framework:
 2. Copy [docker-compose.env.tpl](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.env.tpl) and modify it as needed
 
         cp docker-compose.env.tpl docker-compose.env
-3. Log in to GitHub Container Registry with personal access token (GitHub classic token with read:packages access scope enabled)
-
-        echo $PAT | docker login ghcr.io --username <username> --password-stdin
-4. Use Docker Compose to startup the TOP Framework services
+3. Use Docker Compose to startup the TOP Framework services
 
         docker compose up -d
 
