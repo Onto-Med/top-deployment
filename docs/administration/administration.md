@@ -28,11 +28,28 @@ Follow these instructions to set up the TOP framework:
 
         docker compose up -d
 
-If you didn't modify docker-compose.env, you can now access the framework at <https://localhost> in your browser.
-You may need to accept a Caddy certificate on the first access of this site.
+If you didn't modify docker-compose.env, you can now access the framework at <http://localhost> in your browser.
 
 All data will be stored in the Docker volume `top-data` (see declaration at the end of [docker-compose.yml](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.yml)).
 Feel free to update this volume configuration (e.g., make it external or provide an absolute path on the host).
+
+### Use SSL
+The TOP Framework uses [Caddy](https://caddyserver.com) as reverse proxy. Caddy is able to automatically generate SSL certs for you.
+
+Do the following to enable SSL:
+
+1. Add a port mapping for port 443 to docker compose service 'caddy'
+
+        services:
+          caddy:
+            # ...
+            ports:
+              - 80:80
+              - 443:443
+2. Modify the environment variable `BASE_URL` in `docker-compose.env` to something like: 'https://your.domain'
+3. Restart the docker compose stack
+
+        docker compose up -d
 
 ### Add Plugins
 Plugins can be provided as JAR files (dependencies must be included too, see for example [Apache Maven Assembly Plugin](https://maven.apache.org/plugins/maven-assembly-plugin/usage.html)).
