@@ -2,7 +2,7 @@
 layout: default
 title: Administration
 nav_order: 3
-has_children: false
+has_children: true
 permalink: /administration
 ---
 
@@ -69,7 +69,7 @@ services:
 More information about backend plugins is available at the [top-backend documentation](https://github.com/Onto-Med/top-backend#plugins).
 
 ### Add Data Adapter Configurations
-You can create data adapter configuration files and mount them into the `backend` container by modifying [docker-compose.yml](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.yml). For a detailed specification of the configuration files, see [top-phenotypic-query](https://github.com/Onto-Med/top-phenotypic-query).
+You can create data adapter configuration files and mount them into the `backend` container by modifying [docker-compose.yml](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.yml). For a detailed specification of the configuration files, see [Data Adapter Configuration](./data-adapter-configuration).
 
 ```yml
 services:
