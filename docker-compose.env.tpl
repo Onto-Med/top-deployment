@@ -2,7 +2,6 @@
 # Caddy supports automatic HTTPS. You can find more information on: https://caddyserver.com
 # The BASE_URL variable is also used to configure the URL, the frontend sends it's requests to.
 BASE_URL=http://localhost
-
 # Use the variable APP_PATH to configure on what path the backend is running. This path will be appended
 # to BASE_URL.
 APP_PATH=/api
