@@ -2,6 +2,7 @@
 # Caddy supports automatic HTTPS. You can find more information on: https://caddyserver.com
 # The BASE_URL variable is also used to configure the URL, the frontend sends it's requests to.
 BASE_URL=http://localhost
+
 # Use the variable APP_PATH to configure on what path the backend is running. This path will be appended
 # to BASE_URL.
 APP_PATH=/api
@@ -26,7 +27,7 @@ API_URL=${BASE_URL}${APP_PATH}
 # for configuration files.
 DATA_SOURCE_CONFIG_DIR=/configs
 
-# The variable QUERY_RESULT_DIR can be used to modify the location where phenotyp query results are
+# The variable QUERY_RESULT_DIR can be used to modify the location where phenotype query results are
 # stored as ZIP files.
 QUERY_RESULT_DIR=/data/query_results
 
