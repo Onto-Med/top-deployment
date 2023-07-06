@@ -3,7 +3,7 @@ layout: default
 title: Data Adapter Configuration
 parent: Administration
 nav_order: 1
-permalink: /administration/adapter-configuration
+permalink: /administration/data-adapter-configuration
 ---
 
 # Data Adapter Configuration
