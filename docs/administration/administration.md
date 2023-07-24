@@ -33,6 +33,18 @@ If you didn't modify docker-compose.env, you can now access the framework at <ht
 All data will be stored in the Docker volume `top-data` (see declaration at the end of [docker-compose.yml](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.yml)).
 Feel free to update this volume configuration (e.g., make it external or provide an absolute path on the host).
 
+### How to Upgrade
+
+1. Backup your Docker volumes
+2. Pull changes from this repository
+
+        cd top-deployment
+        git pull
+3. Review [docker-compose.env.tpl](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.env.tpl) for new environment variables
+4. Pull Docker images and recreate containers
+
+        docker compose up --pull always -d
+
 ### Use SSL
 The TOP Framework uses [Caddy](https://caddyserver.com) as reverse proxy. Caddy is able to automatically generate SSL certs for you.
 
