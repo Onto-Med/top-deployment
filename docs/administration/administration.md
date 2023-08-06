@@ -125,9 +125,11 @@ After a successful login they will be redirected back to the TOP Frontend.
 ## Troubleshoot
 
 * **`java.lang.OutOfMemoryError` when running queries:**
+
   Depending on the query complexity and the amount of data available in a data source, queries may require a lot of memory (RAM).
   You can increase the Java Runtime Environment's maximum Java heap size with the [-Xmx option](https://docs.oracle.com/cd/E13150_01/jrockit_jvm/jrockit/jrdocs/refman/optionX.html#wp999528).
-  Add a `command` entry to the `backend` service in the [docker-compose.yml](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.yml) file:
+
+  Override the `entrypoint` of the `backend` service in the [docker-compose.yml](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.yml) file:
 
       services:
         backend:
