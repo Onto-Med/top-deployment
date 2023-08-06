@@ -9,6 +9,14 @@ permalink: /administration
 # Administration
 {: .no_toc }
 
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+## Overview
+
 The TOP Framework consists of:
 
 * **Frontend:** [Vue.js](https://vuejs.org) and [Quasar](https://quasar.dev) based Single-Page Application ([top-frontend](https://github.com/Onto-Med/top-frontend))
@@ -113,3 +121,16 @@ After starting Keycloak, log in with admin credentials and perform the following
 
 The TOP Frontend should now display a login button in the top right corner. If a visitor clicks on that button they will be redirected to the Keycloak login page.
 After a successful login they will be redirected back to the TOP Frontend.
+
+## Troubleshoot
+
+* **`java.lang.OutOfMemoryError` when running queries:**
+  Depending on the query complexity and the amount of data available in a data source, queries may require a lot of memory (RAM).
+  You can increase the Java Runtime Environment's maximum Java heap size with the [-Xmx option](https://docs.oracle.com/cd/E13150_01/jrockit_jvm/jrockit/jrdocs/refman/optionX.html#wp999528).
+  Add a `command` entry to the `backend` service in the [docker-compose.yml](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.yml) file:
+
+      services:
+        backend:
+          # set maximum heap size to 4GB
+          entrypoint: java -Xmx4G -cp top-backend.jar:/plugins/* org.springframework.boot.loader.PropertiesLauncher
+          # other options...
