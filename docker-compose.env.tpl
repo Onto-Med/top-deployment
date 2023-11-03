@@ -32,7 +32,7 @@ DATA_SOURCE_CONFIG_DIR=/configs
 QUERY_RESULT_DIR=/data/query_results
 
 # The backend can query terms from an OLS (v3) instance. The API endpoint of that instance is configured
-# with TERMINOLOGY_SERVICE_ENDPOINT.
+# with TERMINOLOGY_SERVICE_ENDPOINT
 TERMINOLOGY_SERVICE_ENDPOINT=https://www.ebi.ac.uk/ols/api
 
 # If you want the frontend to show a GDPR conform cookie notification, you can set the variable
@@ -61,3 +61,16 @@ OAUTH2_ENABLED=false
 OAUTH2_URL=http://127.0.0.1/auth
 OAUTH2_REALM=top-realm
 OAUTH2_CLIENT_ID=top-frontend
+
+# Logging
+# Spring uses Logback by default: TRACE, DEBUG, INFO, WARN, ERROR
+LOG_LEVEL_SPRING=WARN
+LOG_LEVEL_LIQUIBASE=WARN
+# https://docs.liquibase.com/concepts/connections/liquibase-environment-variables.html
+LIQUIBASE_LOG_LEVEL=${LOG_LEVEL_LIQUIBASE}
+LOG_LEVEL_HIBERNATE=WARN
+# Java Util Logging: FINEST, FINER, FINE, CONFIG, INFO, WARNING, SEVERE
+LOG_LEVEL_JUL=WARNING
+JAVA_OPTS=-Djava.util.logging.ConsoleHandler.level=${LOG_LEVEL_JUL} -Dlogging.level.org.springframework=${LOG_LEVEL_SPRING} -Dlogging.level.liquibase=${LOG_LEVEL_LIQUIBASE} -Dlogging.level.org.hibernate=${LOG_LEVEL_HIBERNATE}
+# Some JDKs only pick this up instead of JAVA_OPTS
+JAVA_TOOL_OPTIONS=${JAVA_OPTS}
