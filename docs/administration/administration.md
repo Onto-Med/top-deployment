@@ -89,17 +89,17 @@ services:
 More information about backend plugins is available at the [top-backend documentation](https://github.com/Onto-Med/top-backend#plugins).
 
 ### Add Data Adapter Configurations
-You can create data adapter configuration files and mount them into the `backend` container by modifying [docker-compose.yml](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.yml). For a detailed specification of the configuration files, see [Data Adapter Configuration](./administration/data-adapter-configuration).
+You can create data adapter configuration files and mount them into the `backend` container by modifying [docker-compose.yml](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.yml).
+In this example, we assume that the data source configurations reside in the `./configs` folder.
+To make a data source available to an organization and all of its repositories, an administrator has to add the data source in the organization page via the "Manage"->"Data sources" menu.
+For a detailed specification of the configuration files, see [Data Adapter Configuration](./administration/data-adapter-configuration).
 
 ```yml
 services:
   backend:
     # ...
     volumes:
-      - top-data-adapter-configs:/configs
-volumes:
-  top-data-adapter-configs:
-    # volume settings
+      - ./configs:/configs:ro
 ```
 
 ### Protection with OAuth2
