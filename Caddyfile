@@ -1,5 +1,6 @@
-{$BASE_URL} {
+	rewrite /api /api/
 	reverse_proxy /api/* backend:8080
+	rewrite /auth /auth/
 	reverse_proxy /auth/* keycloak:8080
 	reverse_proxy /* frontend:80
 
