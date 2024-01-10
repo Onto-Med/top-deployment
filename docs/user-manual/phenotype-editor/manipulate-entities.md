@@ -88,6 +88,10 @@ Using the ENTER key is particularly useful as it allows you to add multiple code
 
 In case the code system you want to search in is not provided by the Ontology Lookup Service, you can switch to manual code entry by clicking the 'Code search' switch. You then have to enter the URI of the code system and the code itself.
 
+In the screenshot below you can see the note 'Self' for the Body Mass Index code. This means that the code refers exactly to this terminology node. There are two other options, 'Subtree' (all nodes below the code) and 'Leaves' (all leaves below the code, but no intermediate nodes), which allow you to reference more than one terminology node with a code.
+
 ![Code input](../../assets/images/phenotype-editor-code-input.png)
 
 _Figure 6: Input component for codes from standard terminologies._
+
+As well as entering codes manually, you can also import them from a CSV formatted file. Simply click on the 'Import' button to open the appropriate CSV import menu. Here you can load a CSV file and select codes from it to transfer to the Phenotype Editor form.
