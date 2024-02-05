@@ -58,8 +58,9 @@ about that component
 ### Expression Editor
 The Phenotype Editor has a special component to build boolean and mathematical expressions (see figure 4). You can left click parts of
 an expression (i.e., entities, constants and functions) to open a small context menu. In this menu you can change the type of the part
-and remove or surround it with another function. In case of entities, the context menu allows you to navigate to the definition of that
-entity.
+and remove or surround it with another function. Documentation for all standard functions is provided by
+[top-phenotypic-query](https://onto-med.github.io/top-phenotypic-query/). In case of entities, the context menu allows you to navigate
+to the definition of that entity.
 
 ![Adding an entity to an expression](../../assets/images/phenotype-editor-expression-input.png)
 
