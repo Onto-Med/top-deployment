@@ -37,12 +37,12 @@ We distinguish between the following types:
 In this type of repository, one can store phenotype definitions.
 
 We recommend you to create a phenotype repository for each [phenotype algorithm](#phenotype-algorithm) you want to model.
-By capsulising algorithms that way, you make sure that they are more comprehensible and can be find easily.
+By capsulising algorithms that way, you make sure that they are more comprehensible and can be found easily.
 
 ### Concept repository
 
 In contrast to the phenotype repository type, this type can only hold concepts.
-The purpose if this repository type is to build a collection of concepts that can be used to query for specific information, contents or documents.
+The purpose of this repository type is to build a collection of concepts that can be used to query for specific information, contents or documents.
 Consider a large indexed set of documents, one wants to search for a subset that addresses some topic.
 
 ## Entities

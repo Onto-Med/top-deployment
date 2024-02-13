@@ -19,7 +19,7 @@ _Figure 1: Creating a fork of an entity from a primary repository._
 You can create forks by searching for suitable entities in the search bar and by clicking on the copy button.
 After you have created a fork, you can modify it as needed. The fork will have its own version history, but you can anytime sync it with the originating entity.
 
-When you select an entity for forking, a menu will open as show in figure 2. In this menu you can configure the behavious of the fork.
+When you select an entity for forking, a menu will open as show in figure 2. In this menu you can configure the behaviours of the fork.
 
 ![Forking menu](../../assets/images/phenotype-editor-forking-menu.png)
 
