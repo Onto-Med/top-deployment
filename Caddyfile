@@ -1,3 +1,5 @@
+{$BASE_URL}
+
 rewrite /api /api/
 reverse_proxy /api/* backend:8080
 rewrite /auth /auth/
@@ -6,4 +8,3 @@ reverse_proxy /* frontend:80
 
 header / Cache-Control no-cache
 header /api/* Cache-Control no-cache
-}
