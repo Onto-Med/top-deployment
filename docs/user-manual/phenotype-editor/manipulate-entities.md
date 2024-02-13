@@ -17,7 +17,7 @@ permalink: /user-manual/phenotype-editor/manipulate-entities
 {:toc}
 
 ## Create
-In order to create new entities (phenotypes or categories) you have to navigate to a repository, where new entities shall be stored in.
+In order to create new entities (phenotypes or categories), you have to navigate to a repository, where new entities shall be stored in.
 
 On the left side of the screen you will see the tree view where all available entities of the repository are listed. If the repository is empty, the list is blank.
 
