@@ -25,6 +25,8 @@ services:
       - db
     volumes:
       - query-results:/data/query_results
+      # Uncomment the following line to mount data adapter configurations from a local ./configs directory.
+      # - ./configs:/configs:ro
     environment:
       - DB_HOST=db
       - DB_PORT=5432
