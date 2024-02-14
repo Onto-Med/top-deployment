@@ -31,7 +31,7 @@ DATA_SOURCE_CONFIG_DIR=/configs
 # stored as ZIP files.
 QUERY_RESULT_DIR=/data/query_results
 
-# The backend can query terms from an OLS (v3) instance. The API endpoint of that instance is configured
+# The backend can query terms from an OLS (v4) instance. The API endpoint of that instance is configured
 # with TERMINOLOGY_SERVICE_ENDPOINT
 TERMINOLOGY_SERVICE_ENDPOINT=https://www.ebi.ac.uk/ols4/api
 
