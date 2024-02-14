@@ -31,9 +31,9 @@ DATA_SOURCE_CONFIG_DIR=/configs
 # stored as ZIP files.
 QUERY_RESULT_DIR=/data/query_results
 
-# The backend can query terms from an OLS (v3) instance. The API endpoint of that instance is configured
+# The backend can query terms from an OLS (v4) instance. The API endpoint of that instance is configured
 # with TERMINOLOGY_SERVICE_ENDPOINT
-TERMINOLOGY_SERVICE_ENDPOINT=https://www.ebi.ac.uk/ols/api
+TERMINOLOGY_SERVICE_ENDPOINT=https://www.ebi.ac.uk/ols4/api
 
 # If you want the frontend to show a GDPR conform cookie notification, you can set the variable
 # GDPR_NOTICE to true. Users can accept the notification and it will not be displayed until cookies
