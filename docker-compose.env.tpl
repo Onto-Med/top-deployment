@@ -7,6 +7,9 @@ BASE_URL=http://localhost
 # to BASE_URL.
 APP_PATH=/api
 
+# Setting this variable to true will create a demo organisation with a small BMI phenotype model on startup.
+IMPORT_DEMO_DATA=false
+
 # These are the parameters to connect to the TOP Framework PostgreSQL DB. If you want to use an external
 # PostgreSQL DB, modify the variables below as needed and disable the docker compose 'db' service.
 DB_NAME=postgres
