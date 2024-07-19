@@ -51,12 +51,30 @@ GDPR_POLICY_URL=
 # frontend. Users can dismiss the alert box containing the text.
 SYSTEM_NOTICE=
 
+##
+# Document search related settings. You can ignore this section if DOCUMENTS_ENABLED is false.
+##
+DOCUMENTS_ENABLED=false
+
+# Location of document data source configuration files.
+DOCUMENT_DATA_SOURCE_CONFIG_DIR=config/data_sources/nlp
+
 # Use the following variables to configure the Neo4j authentication parameters.
 DB_NEO4J_USER=neo4j
 DB_NEO4J_PASS=password # You should change this value!
 
 # Above variables are also used to configure the docker compose 'neo4j' service.
 NEO4J_AUTH=${DB_NEO4J_USER}/${DB_NEO4J_PASS}
+
+# Timeout in seconds for requests to Neo4j.
+DB_NEO4J_CONNECTION_TIMEOUT=30s
+
+# Endpoint of the concept-graphs service. See https://github.com/Onto-Med/concept-graphs for documentation.
+CONCEPT_GRAPHS_API_ENDPOINT=http://localhost:9007
+
+##
+# Authentication
+##
 
 # If you want to protect both, front and backend with an authentication server, please set
 # OAUTH2_ENABLED to true and modify below variables.
@@ -65,7 +83,10 @@ OAUTH2_URL=http://127.0.0.1/auth
 OAUTH2_REALM=top-realm
 OAUTH2_CLIENT_ID=top-frontend
 
+##
 # Logging
+##
+
 # Spring uses Logback by default: TRACE, DEBUG, INFO, WARN, ERROR
 LOG_LEVEL_SPRING=WARN
 LOG_LEVEL_LIQUIBASE=WARN
