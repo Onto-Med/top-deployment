@@ -67,7 +67,7 @@ DB_NEO4J_PASS=password # You should change this value!
 NEO4J_AUTH=${DB_NEO4J_USER}/${DB_NEO4J_PASS}
 
 # Timeout in seconds for requests to Neo4j.
-DB_NEO4J_CONNECTION_TIMEOUT=30s
+DB_NEO4J_CONNECTION_TIMEOUT=30
 
 # Endpoint of the concept-graphs service. See https://github.com/Onto-Med/concept-graphs for documentation.
 CONCEPT_GRAPHS_API_ENDPOINT=http://localhost:9007
