@@ -56,7 +56,7 @@ services:
       - docker-compose.env
 
   keycloak:
-    image: jboss/keycloak:16.1.1
+    image: quay.io/keycloak/keycloak:16.1.1
     profiles:
       - auth
     restart: unless-stopped
