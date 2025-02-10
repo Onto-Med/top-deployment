@@ -27,8 +27,10 @@ API_URL=${BASE_URL}${APP_PATH}
 
 # Adapter configuration files can be stored in a folder and mounted to the docker compose 'backend'
 # service. The variable DATA_SOURCE_CONFIG_DIR is used to modify the location where the backend looks
-# for configuration files.
+# for configuration files for phenotype data adapters. And DOCUMENT_DATA_SOURCE_CONFIG_DIR sets the path
+# for document search adapters.
 DATA_SOURCE_CONFIG_DIR=/configs
+DOCUMENT_DATA_SOURCE_CONFIG_DIR=/configs/nlp
 
 # The variable QUERY_RESULT_DIR can be used to modify the location where phenotype query results are
 # stored as ZIP files.
