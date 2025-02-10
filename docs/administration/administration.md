@@ -102,6 +102,10 @@ services:
       - ./configs:/configs:ro
 ```
 
+There is also an option to upload specific formats to create a data source that is directly stored in the backend database. The form to upload data sources is also located in the organization menu "Manage"->"Data sources". We currently support the upload of FHIR and CSV files.After the upload has finished, you can enable the data source for any organization.
+
+![Manage data sources](../assets/images/manage-data-sources.png)
+
 ### Protection with OAuth2
 If you want to protect front and backend with OAuth2 authentication, you must set up a [Keycloak](https://quay.io/repository/keycloak/keycloak?tab=info) server.
 Respective Keycloak containers are already included in the [docker-compose.yml](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.yml) file (use docker compose profile "auth", e.g.: `docker compose --profile auth up -d`).
