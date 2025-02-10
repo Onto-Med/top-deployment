@@ -106,6 +106,21 @@ There is also an option to upload specific formats to create a data source that 
 
 ![Manage data sources](../assets/images/manage-data-sources.png)
 
+### NLP/Document related configuration
+To utilize the document search of the framework, one needs three different services running: 
+
+1. Elasticsearch or something similar
+2. A Neo4j cluster
+3. And the [concept graphs service](https://github.com/Onto-Med/concept-graphs)
+
+The document search is adapter-centric and requires a working configuration file (YAML) that specifies the addresses of the above services
+in the folder declared with the `DOCUMENT_DATA_SOURCE_CONFIG_DIR` environment variable.
+If no `DOCUMENT_DEFAULT_ADAPTER` is specified, the first adapter found in the folder is used for setup.
+
+Similarly to data adapter configurations, document adapter configurations must be mounted into the backend Docker container.
+
+For convenience reasons, the default value of `DOCUMENT_DATA_SOURCE_CONFIG_DIR` is `/configs/nlp`, which means that you can create a sub folder `nlp` in the host systems `configs` folder and reuse the Docker mount configuration from [NLP/Document related configuration](#add-data-adapter-configurations).
+
 ### Protection with OAuth2
 If you want to protect front and backend with OAuth2 authentication, you must set up a [Keycloak](https://quay.io/repository/keycloak/keycloak?tab=info) server.
 Respective Keycloak containers are already included in the [docker-compose.yml](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.yml) file (use docker compose profile "auth", e.g.: `docker compose --profile auth up -d`).
