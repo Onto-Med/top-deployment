@@ -104,7 +104,7 @@ services:
 
 There is also an option to upload specific formats to create a data source that is directly stored in the backend database. The form to upload data sources is also located in the organization menu "Manage"->"Data sources". We currently support the upload of FHIR and CSV files.After the upload has finished, you can enable the data source for any organization.
 
-![Manage data sources](../assets/images/manage-data-sources.png)
+![Manage data sources](assets/images/manage-data-sources.png)
 
 ### NLP/Document related configuration
 To utilize the document search of the framework, one needs three different services running: 
