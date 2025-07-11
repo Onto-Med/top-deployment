@@ -72,7 +72,7 @@ NEO4J_AUTH=${DB_NEO4J_USER}/${DB_NEO4J_PASS}
 DB_NEO4J_CONNECTION_TIMEOUT=30
 
 # Endpoint of the concept-graphs service. See https://github.com/Onto-Med/concept-graphs for documentation.
-CONCEPT_GRAPHS_API_ENDPOINT=http://localhost:9007
+CONCEPT_GRAPHS_API_ENDPOINT=http://localhost:9010
 
 ##
 # Authentication
