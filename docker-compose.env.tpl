@@ -81,7 +81,7 @@ CONCEPT_GRAPHS_API_ENDPOINT=http://localhost:9010
 # If you want to protect both, front and backend with an authentication server, please set
 # OAUTH2_ENABLED to true and modify below variables.
 OAUTH2_ENABLED=false
-OAUTH2_URL=http://127.0.0.1/auth
+OAUTH2_URL=http://localhost/auth
 OAUTH2_REALM=top-realm
 OAUTH2_CLIENT_ID=top-frontend
 

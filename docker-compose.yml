@@ -56,17 +56,24 @@ services:
       - docker-compose.env
 
   keycloak:
-    image: quay.io/keycloak/keycloak:16.1.1
+    image: quay.io/keycloak/keycloak:26.3
     profiles:
       - auth
     restart: unless-stopped
     depends_on:
       - keycloak-db
+    command: start --http-enabled=true --spi-login-protocol-openid-connect-legacy-logout-redirect-uri=true
     environment:
-      - DB_VENDOR=postgres
-      - DB_ADDR=keycloak-db
-      - DB_USER=keycloak
-      - DB_PASSWORD=keycloak
+      # Use the following lines to set up an initial admin user.
+      # - KC_BOOTSTRAP_ADMIN_USERNAME=admin
+      # - KC_BOOTSTRAP_ADMIN_PASSWORD=password
+      - KC_DB=postgres
+      - KC_DB_URL=jdbc:postgresql://keycloak-db/keycloak
+      - KC_DB_USERNAME=keycloak
+      - KC_DB_PASSWORD=keycloak
+      - KC_HTTP_RELATIVE_PATH=/auth
+      - KC_HOSTNAME=http://localhost/auth
+      - KC_PROXY_HEADER=xforwarded
 
   keycloak-db:
     image: postgres:15
