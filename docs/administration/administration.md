@@ -125,21 +125,20 @@ For convenience reasons, the default value of `DOCUMENT_DATA_SOURCE_CONFIG_DIR` 
 If you want to protect front and backend with OAuth2 authentication, you must set up a [Keycloak](https://quay.io/repository/keycloak/keycloak?tab=info) server.
 Respective Keycloak containers are already included in the [docker-compose.yml](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.yml) file (use docker compose profile "auth", e.g.: `docker compose --profile auth up -d`).
 
-You may also need to modify the configurations in `docker-compose.env.tpl`.
+You may also need to modify the configurations in `docker-compose.env`.
 
-If Keycloak is run for the first time, you need to create an admin account:
+If you are running Keycloak for the first time, you need to create an admin account. In the `docker-compose.yml` file, set the environment variables `KC_BOOTSTRAP_ADMIN_USERNAME` and `KC_BOOTSTRAP_ADMIN_USERNAME_PASSWORD` to your desired username and password, respectively. After the first startup, these variables can be removed.
 
-```sh
-docker compose exec keycloak /opt/jboss/keycloak/bin/add-user-keycloak.sh -u <USERNAME> -p <PASSWORD>
-docker compose restart keycloak
-```
-
-After starting Keycloak, log in with admin credentials and perform the following tasks:
-1. Create a new realm (e.g.: "top-realm")
-2. Create a new client for that realm (e.g.: "top-frontend"). Make sure to modify the URLs in the client configuration to match your TOP Frontend instance.
+After starting Keycloak, log in with the admin credentials and perform the following tasks:
+1. Create a new realm (e.g.: "top-realm"). The name should match the `OAUTH2_REALM` environment variable in `docker-compose.env`.
+2. Create a new client for that realm (e.g.: "top-frontend"). The name should match the `OAUTH2_CLIENT_ID` environment variable in `docker-compose.env`.
+   - *Root URL*: `http://localhost/auth` (or your domain if you are using SSL)
+   - *Valid Redirect URIs* and *Web Origins*: `http://localhost/*` (or your domain if you are using SSL)
+   - *Valid post logout redirect URIs*: `+`
+3. Optionally, you can create a user group (e.g.: "top-managers") with roles "manage-users", "query-users", "view-realm", and "view-users". Assign users to this group to allow them to manage users in the TOP Framework. They can log in at http://localhost/auth/admin/top-realm/console.
 
 The TOP Frontend should now display a login button in the top right corner. If a visitor clicks on that button they will be redirected to the Keycloak login page.
-After a successful login they will be redirected back to the TOP Frontend.
+After a successful login, they will be redirected back to the TOP Frontend.
 
 ## Troubleshoot
 
