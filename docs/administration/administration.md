@@ -22,34 +22,56 @@ The TOP Framework consists of:
 * **Frontend:** [Vue.js](https://vuejs.org) and [Quasar](https://quasar.dev) based Single-Page Application ([top-frontend](https://github.com/Onto-Med/top-frontend))
 * **Backend:** [Spring Boot Resource Server](https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/index.html) ([top-backend](https://github.com/Onto-Med/top-backend))
 
+In addition, the framework uses the following services:
+
+* **PostgreSQL:** Database for the backend ([postgres](https://www.postgresql.org))
+* **Concept Graphs:** Service for concept graphs ([concept-graphs](https://github.com/Onto-Med/concept-graphs))
+* **Neo4j:** Graph database for storing concept graphs ([neo4j](https://neo4j.com))
+* **Elasticsearch:** Search engine for documents ([elasticsearch](https://www.elastic.co/elasticsearch/))
+* *optional:* **Caddy:** Reverse proxy and SSL certificate management ([caddy](https://caddyserver.com))
+* *optional:* **Keycloak:** Identity and Access Management ([keycloak](https://www.keycloak.org))
+
 ## Getting started
 Follow these instructions to set up the TOP framework:
 
-1. Clone this repository
+1. Clone this repository.
 
         git clone https://github.com/Onto-Med/top-deployment.git
         cd top-deployment
-2. Copy [docker-compose.env.tpl](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.env.tpl) and modify it as needed
+2. Copy [docker-compose.env.tpl](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.env.tpl) and modify it as needed.
 
         cp docker-compose.env.tpl docker-compose.env
-3. Use Docker Compose to startup the TOP Framework services
+3. Use Docker Compose to startup the TOP Framework services.
 
         docker compose up -d
 
 If you didn't modify docker-compose.env, you can now access the framework at <http://localhost> in your browser.
 
-All data will be stored in the Docker volume `top-data` (see declaration at the end of [docker-compose.yml](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.yml)).
-Feel free to update this volume configuration (e.g., make it external or provide an absolute path on the host).
+All data will be stored in the Docker volumes `top-data`, `top-neo4j-data`, and `query-results` (see declaration at the end of [docker-compose.yml](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.yml)).
+We suggest to use external volumes for production deployments, so that data is not lost when the containers are removed.
+You can do this by modifying the `volumes` section in [docker-compose.yml](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.yml).
+
+```yml
+volumes:
+  top-data:
+    external: true
+  neo4j-data:
+    external: true
+  query-results:
+    external: true
+```
+
+This also applies to the volume `keycloak-data` if you are using Keycloak for authentication.
 
 ### How to Upgrade
 
-1. Backup your Docker volumes
-2. Pull changes from this repository
+1. Stop the services and backup your Docker volumes. See [Official Docker Documentation](https://docs.docker.com/engine/storage/volumes/#back-up-restore-or-migrate-data-volumes).
+2. Pull changes from this repository.
 
         cd top-deployment
         git pull
-3. Review [docker-compose.env.tpl](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.env.tpl) for new environment variables
-4. Pull Docker images and recreate containers
+3. Review [docker-compose.env.tpl](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.env.tpl) for new environment variables.
+4. Pull Docker images and recreate containers.
 
         docker compose up --pull always -d
 
@@ -65,7 +87,7 @@ Do the following to enable SSL:
             # ...
             ports:
               - 80:80
-              - 443:443
+              - 443:443 # <- add this line
 2. Modify the environment variable `BASE_URL` in `docker-compose.env` to something like: 'https://your.domain'
 3. Restart the docker compose stack
 
@@ -73,7 +95,7 @@ Do the following to enable SSL:
 
 ### Add Plugins
 Plugins can be provided as JAR files (dependencies must be included too, see for example [Apache Maven Assembly Plugin](https://maven.apache.org/plugins/maven-assembly-plugin/usage.html)).
-You just have to place those JAR files in a directory and mount it to `\plugins` directory of the backend container.
+You just have to place those JAR files in a directory and mount it to the `\plugins` directory of the backend container.
 
 ```yml
 services:
@@ -102,7 +124,10 @@ services:
       - ./configs:/configs:ro
 ```
 
-There is also an option to upload specific formats to create a data source that is directly stored in the backend database. The form to upload data sources is also located in the organization menu "Manage"->"Data sources". We currently support the upload of FHIR and CSV files.After the upload has finished, you can enable the data source for any organization.
+There is also an option to upload specific formats to create a data source that is directly stored in the backend database.
+We currently support the upload of FHIR and CSV files.
+After the upload has finished, you can enable the data source for any organization.
+Navigate to the organization page and select "Manage"->"Data sources" to do so.
 
 ![Manage data sources](assets/images/manage-data-sources.png)
 
@@ -127,17 +152,24 @@ Respective Keycloak containers are already included in the [docker-compose.yml](
 
 You may also need to modify the configurations in `docker-compose.env`.
 
-If you are running Keycloak for the first time, you need to create an admin account. In the `docker-compose.yml` file, set the environment variables `KC_BOOTSTRAP_ADMIN_USERNAME` and `KC_BOOTSTRAP_ADMIN_USERNAME_PASSWORD` to your desired username and password, respectively. After the first startup, these variables can be removed.
+If you are running Keycloak for the first time, you need to create an admin account.
+In the `docker-compose.yml` file, set the environment variables `KC_BOOTSTRAP_ADMIN_USERNAME` and `KC_BOOTSTRAP_ADMIN_USERNAME_PASSWORD` to your desired username and password, respectively.
+After the first startup, these variables can be removed.
 
 After starting Keycloak, log in with the admin credentials and perform the following tasks:
-1. Create a new realm (e.g.: "top-realm"). The name should match the `OAUTH2_REALM` environment variable in `docker-compose.env`.
-2. Create a new client for that realm (e.g.: "top-frontend"). The name should match the `OAUTH2_CLIENT_ID` environment variable in `docker-compose.env`.
+1. Create a new realm (e.g.: "top-realm").
+   The name should match the `OAUTH2_REALM` environment variable in `docker-compose.env`.
+2. Create a new client for that realm (e.g.: "top-frontend").
+   The name should match the `OAUTH2_CLIENT_ID` environment variable in `docker-compose.env`.
    - *Root URL*: `http://localhost/auth` (or your domain if you are using SSL)
    - *Valid Redirect URIs* and *Web Origins*: `http://localhost/*` (or your domain if you are using SSL)
    - *Valid post logout redirect URIs*: `+`
-3. Optionally, you can create a user group (e.g.: "top-managers") with roles "manage-users", "query-users", "view-realm", and "view-users". Assign users to this group to allow them to manage users in the TOP Framework. They can log in at http://localhost/auth/admin/top-realm/console.
+3. Optionally, you can create a user group (e.g.: "top-managers") with roles "manage-users", "query-users", "view-realm", and "view-users".
+   Assign users to this group to allow them to manage users in the TOP Framework.
+   They can log in at http://localhost/auth/admin/top-realm/console.
 
-The TOP Frontend should now display a login button in the top right corner. If a visitor clicks on that button they will be redirected to the Keycloak login page.
+The TOP Frontend should now display a login button in the top right corner.
+If a visitor clicks on that button they will be redirected to the Keycloak login page.
 After a successful login, they will be redirected back to the TOP Frontend.
 
 ## Troubleshoot

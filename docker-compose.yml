@@ -91,6 +91,6 @@ services:
 volumes:
   top-data:
   top-neo4j-data:
+  query-results:
   caddy-data:
   keycloak-data:
-  query-results:
