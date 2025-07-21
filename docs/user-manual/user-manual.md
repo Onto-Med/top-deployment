@@ -11,4 +11,4 @@ permalink: /user-manual
 
 {: .fs-6 .fw-300 }
 
-On the following pages you can find extensive descriptions about the TOP Framework and it's functionalities.
+On the following pages you can find extensive descriptions about the TOP Framework and its functionalities.
