@@ -27,7 +27,7 @@ In order to access the query builder and start building your query, you first ha
 
 Click on the button above the entity tree on the left side as shown in figure 1.
 
-!["Build query" button](../../assets/images/query-builder-access.png)
+!["Build query" button](../assets/images/query-builder-access.png)
 _Figure 1: Press the top right button to open the query builder._
 
 ## Build a Query
@@ -38,7 +38,7 @@ In the first section you can define a name for the query and select one or more 
 
 There is also an option to import a previously exported query setup.
 
-![General query configuration](../../assets/images/query-builder-configuration.png)
+![General query configuration](../assets/images/query-builder-configuration.png)
 _Figure 2: General configuration of a query._
 
 ### Projection and Eligibility Criteria
@@ -51,13 +51,13 @@ You can also perform a right click on phenotypes in the tree to specify whether 
 If you want to convert a criterion to an exclusion criterion, you can use the sliders in front of each criteria. In the example in figure 3,
 the phenotype "Sex: Male" has been marked as exclusion criterion. You can remove projections and criteria by clicking the minus button behind each entry.
 
-![Projection and eligibility criteria](../../assets/images/query-builder-projection-eligibility-criteria.png)
+![Projection and eligibility criteria](../assets/images/query-builder-projection-eligibility-criteria.png)
 _Figure 3: A simple query with projection and criteria. "Sex: Male" is an exclusion criterion._
 
 Advanced queries can be build by specifying time restrictions for criteria. For instance, you can query for subjects with height values in range 2022-05-11 22:33 and
 2023-06-19 10:32 (see figure 4). You can also add multiple entries of a phenotype to the projection or criteria list and specify different time ranges for each entry.
 
-![Restrictions for criterion "height"](../../assets/images/query-builder-time-restriction.png)
+![Restrictions for criterion "height"](../assets/images/query-builder-time-restriction.png)
 _Figure 4: Example restrictions of a criterion._
 
 If your query contains a composite phenotype, you must specify a default aggregation function. This function is used to aggregate multiple phenotype values to one value
@@ -67,5 +67,5 @@ and to be able to use it for calculations
 If you have finished the query specification, click "Execute" to enqueue the query. When the execution has finished, the result is shown in the "Previous queries" section.
 You can adjust a query and execute it multiple times and there is also an option to download the result set (must be enabled by administrators).
 
-![Query closure](../../assets/images/query-builder-result.png)
+![Query closure](../assets/images/query-builder-result.png)
 _Figure 5: Previous queries section with buttons to download result sets, reuse a query, and delete a query._
