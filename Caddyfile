@@ -1,8 +1,8 @@
 {$BASE_URL}
 
-rewrite /api /api/
+redir /api /api/ 308
 reverse_proxy /api/* backend:8080
-rewrite /auth /auth/
+redir /auth /auth/ 308
 reverse_proxy /auth/* keycloak:8080
 reverse_proxy /* frontend:80
 
