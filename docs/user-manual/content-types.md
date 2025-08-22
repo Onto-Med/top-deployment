@@ -71,7 +71,10 @@ Use categories to structure repositories. They are similar to folders in a file 
 
 ### Concepts
 
-TODO
+Concepts are the main entities in concept repositories. They can be single concepts or composite concepts.
+Single concepts are sets of synonyms that are used to represent a specific idea or topic.
+Composite concepts are constructed from one or more single or composite concepts and can be used to express more complex ideas or topics.
+They are defined using logical operators such as `AND`, `OR`, `NOT`, and more advanced operators.
 
 ### Phenotypes
 

@@ -13,5 +13,5 @@ permalink: /user-manual/phenotype-editor
 Model and manage phenotypes.
 {: .fs-6 .fw-300 }
 
-The Phenotype Editor is used to model [phenotypes](../content-types#phenotypes) and to manage [repositories](../content-types#repositories) where phenotypes are stored.
-You can also define [categories](../content-types#categories) to structure a repository and make it more accessible.
+The Phenotype Editor is used to model [phenotypes](./content-types#phenotypes) and to manage [repositories](./content-types#repositories) where phenotypes are stored.
+You can also define [categories](./content-types#categories) to structure a repository and make it more accessible.
