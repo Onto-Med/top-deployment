@@ -24,6 +24,6 @@ You will enter a read-only mode of the selected version. In this mode you can ex
 
 All versions of an entity can be referenced at any time by adding the version number as query parameter to the entities URL.
 
-e.g.: https://top.imise.uni-leipzig.de/imise/bmi_example/086cd9d0-3f2f-40c8-bd12-af326dfc2944?version=4 (notice the '?version=4' section at the end of the URL)
+e.g.: <https://top.imise.uni-leipzig.de/imise/bmi_example/086cd9d0-3f2f-40c8-bd12-af326dfc2944?version=4> (notice the '?version=4' section at the end of the URL)
 
 If the specified version no longer exists, you will be redirected to the current version of the entity.

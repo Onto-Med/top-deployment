@@ -26,7 +26,7 @@ In addition, it provides functionalities for searching in medical documents by i
 The TOP Framework is currently under active development.
 We try to provide a stable and backwards-compatible version of the framework with each release.
 
-A public demo instance is available at: https://top.imise.uni-leipzig.de
+A public demo instance is available at: <https://top.imise.uni-leipzig.de>
 
 ## License
 The TOP Framework is licensed under the [MIT license](LICENSE).

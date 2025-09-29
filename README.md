@@ -9,10 +9,10 @@ The TOP Framework consists of:
 ## State of the Project
 The TOP Framework is currently under heavy development. Usage in a production environment is not yet recommended.
 
-A public demo instance is available at: https://top.imise.uni-leipzig.de
+A public demo instance is available at: <https://top.imise.uni-leipzig.de>
 
 ## Usage
-See https://onto-med.github.io/top-deployment.
+See <https://onto-med.github.io/top-deployment>.
 
 ## License
 The TOP Framework is licensed under the [MIT license](LICENSE).
