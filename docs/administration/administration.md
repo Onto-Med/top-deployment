@@ -147,11 +147,15 @@ services:
 ```
 
 There is also an option to upload specific formats to create a data source that is directly stored in the backend database.
-We currently support the upload of FHIR and CSV files.
-After the upload has finished, you can enable the data source for any organization.
+This is currently only available for testing repositories and only FHIR and CSV files are supported.
+However, after the upload has finished, you can enable the data source for any organization.
 Navigate to the organization page and select "Manage"->"Data sources" to do so.
 
-![Manage data sources](assets/images/manage-data-sources.png)
+More information about the testing functionality is given in [Repository Testing](./user-manual/repository-testing).
+
+![Manage data sources](assets/images/manage-data-sources.png){: width="500" }
+
+*Figure 1: TOP Framework modal to select or upload data sources.*
 
 ### NLP/Document related configuration
 
