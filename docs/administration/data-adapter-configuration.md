@@ -16,10 +16,11 @@ permalink: /administration/data-adapter-configuration
 {:toc}
 
 ## Introduction
+
 The TOP Framework provides two inbuilt data adapters for querying SQL databases and FHIR Search (R4) services:
 
-* [`care.smith.top.top_phenotypic_query.adapter.sql.SQLAdapter`](https://github.com/Onto-Med/top-phenotypic-query/blob/main/src/main/java/care/smith/top/top_phenotypic_query/adapter/sql/SQLAdapter.java)
-* [`care.smith.top.top_phenotypic_query.adapter.fhir.FHIRAdapter`](https://github.com/Onto-Med/top-phenotypic-query/blob/main/src/main/java/care/smith/top/top_phenotypic_query/adapter/fhir/FHIRAdapter.java)
+- [`care.smith.top.top_phenotypic_query.adapter.sql.SQLAdapter`](https://github.com/Onto-Med/top-phenotypic-query/blob/main/src/main/java/care/smith/top/top_phenotypic_query/adapter/sql/SQLAdapter.java)
+- [`care.smith.top.top_phenotypic_query.adapter.fhir.FHIRAdapter`](https://github.com/Onto-Med/top-phenotypic-query/blob/main/src/main/java/care/smith/top/top_phenotypic_query/adapter/fhir/FHIRAdapter.java)
 
 Both are configurable via YAML files. The idea is to have one YAML file for each database or FHIR Search
 service, you want to connect the TOP Framework to. A JSON schema specification for these configuration files
@@ -27,8 +28,8 @@ is available here: [adapter_config_schema.json](https://github.com/Onto-Med/top-
 
 There are also some default configurations provided by these files:
 
-* [Default_SQL_Adapter.yml](https://github.com/Onto-Med/top-phenotypic-query/blob/main/src/main/resources/default_adapter_configuration/Default_SQL_Adapter.yml)
-* [Default_FHIR_Adapter.yml](https://github.com/Onto-Med/top-phenotypic-query/blob/main/src/main/resources/default_adapter_configuration/Default_FHIR_Adapter.yml)
+- [Default_SQL_Adapter.yml](https://github.com/Onto-Med/top-phenotypic-query/blob/main/src/main/resources/default_adapter_configuration/Default_SQL_Adapter.yml)
+- [Default_FHIR_Adapter.yml](https://github.com/Onto-Med/top-phenotypic-query/blob/main/src/main/resources/default_adapter_configuration/Default_FHIR_Adapter.yml)
 
 Because connection properties are needed in order to connect to a database or FHIR Search service, above listed
 default configurations are not sufficient. They just provided some default values that will be merged into your
@@ -158,6 +159,7 @@ subjectQuery:
 ```
 
 ## Phenotype Queries Templates
+
 This part of the configuration can hold one or more phenotype query definitions analogous to the subject queries.
 
 ### Examples
@@ -213,13 +215,13 @@ code mappings (e.g. column name in a database table) as described in the next se
 
 Mappings for the following aspects can be added to the adapter configuration:
 
-* birth date
-* subject age
-* sex
-* other phenotype classes
+- birth date
+- subject age
+- sex
+- other phenotype classes
 
 All of them require a property `code` that contains a code from a standard terminology
-(e.g., 'http://loinc.org|3141-9'). These codes are used to identify phenotype class definitions
+(e.g., `http://loinc.org|3141-9`). These codes are used to identify phenotype class definitions
 contained in a TOP phenotype model, to which the mapping should be applied to.
 
 ### Properties

@@ -8,6 +8,7 @@ permalink: /user-manual/phenotype-editor/forking
 ---
 
 # Forking
+
 Some repositories are marked as "primary". You can reuse entities contained in these repositories for your own repositories.
 Here "reusing" means that a copy of an entity from a primary repository is created. In the background, the copy is linked to the originating entity.
 We call the process of creating copies in your own repositories "forking". The copy is referred to as "fork" of the originating entity.

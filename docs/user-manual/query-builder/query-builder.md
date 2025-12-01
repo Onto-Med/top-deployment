@@ -23,6 +23,7 @@ Queries can be executed against one or more data sources to get result sets with
 {:toc}
 
 ## Access the Query Builder
+
 In order to access the query builder and start building your query, you first have to navigate to the repository from which you want to build the query.
 
 Click on the button above the entity tree on the left side as shown in figure 1.
@@ -31,9 +32,11 @@ Click on the button above the entity tree on the left side as shown in figure 1.
 _Figure 1: Press the top right button to open the query builder._
 
 ## Build a Query
+
 The query building is divided in multiple sections, which will be described here. All mandatory configurations are marked with red exclamation marks.
 
 ### General Configuration
+
 In the first section you can define a name for the query and select one or more data sources, on which you want to perform the query.
 
 There is also an option to import a previously exported query setup.
@@ -43,8 +46,8 @@ _Figure 2: General configuration of a query._
 
 ### Projection and Eligibility Criteria
 
-* **Projection:** list of phenotypes to be included in the result set
-* **Eligibility criteria:** list of phenotypes to be applied as in or exclusion criteria (only phenotypes with Boolean data type and restricted phenotypes are allowed)
+- **Projection:** list of phenotypes to be included in the result set
+- **Eligibility criteria:** list of phenotypes to be applied as in or exclusion criteria (only phenotypes with Boolean data type and restricted phenotypes are allowed)
 
 Left click on phenotypes in the tree on the left side to add them as projection and eligibility criteria to your query.
 You can also perform a right click on phenotypes in the tree to specify whether they should be added to the projection or criteria list.
@@ -64,6 +67,7 @@ If your query contains a composite phenotype, you must specify a default aggrega
 and to be able to use it for calculations
 
 ## Query Execution and Results
+
 If you have finished the query specification, click "Execute" to enqueue the query. When the execution has finished, the result is shown in the "Previous queries" section.
 You can adjust a query and execute it multiple times and there is also an option to download the result set (must be enabled by administrators).
 

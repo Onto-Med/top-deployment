@@ -7,7 +7,6 @@ permalink: /administration/command-line-interface
 ---
 
 # Command Line Interface
-
 {: .no_toc }
 {: .fs-6 .fw-300 }
 

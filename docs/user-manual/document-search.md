@@ -7,7 +7,6 @@ permalink: /user-manual/document-search
 ---
 
 # Document Search
-
 {: .no_toc }
 {: .fs-6 .fw-300 }
 

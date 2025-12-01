@@ -7,10 +7,11 @@ permalink: /
 ---
 
 # TOP Framework
-{: .fs-9 }
+{: .no_toc }
+
+{: .fs-6 .fw-300 }
 
 Terminology- and Ontology-based Phenotyping Framework
-{: .fs-6 .fw-300 }
 
 [How to use](user-manual){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Administration](administration){: .btn .btn-green .fs-5 .mb-4 .mb-md-0 .mr-2 }
@@ -23,10 +24,12 @@ It includes a custom reasoning engine and query service for classification of in
 In addition, it provides functionalities for searching in medical documents by integrating [Elasticsearch](https://www.elastic.co/elasticsearch/) and [Concept Graphs](https://github.com/Onto-Med/concept-graphs).
 
 ## State of the Project
+
 The TOP Framework is currently under active development.
 We try to provide a stable and backwards-compatible version of the framework with each release.
 
 A public demo instance is available at: <https://top.imise.uni-leipzig.de>
 
 ## License
+
 The TOP Framework is licensed under the [MIT license](LICENSE).

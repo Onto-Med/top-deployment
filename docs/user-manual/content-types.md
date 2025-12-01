@@ -9,6 +9,7 @@ permalink: /user-manual/content-types
 # Content Types
 {: .no_toc }
 {: .fs-6 .fw-300 }
+
 This page contains detailed information about all content types, storable in the TOP Framework.
 
 ## Table of contents
@@ -36,7 +37,7 @@ We distinguish between the following types:
 
 In this type of repository, one can store phenotype definitions.
 
-We recommend you to create a phenotype repository for each [phenotype algorithm](#phenotype-algorithm) you want to model.
+We recommend you to create a phenotype repository for each [phenotype algorithm](#phenotype-algorithms) you want to model.
 By capsulising algorithms that way, you make sure that they are more comprehensible and can be found easily.
 
 ### Concept repository
@@ -55,15 +56,15 @@ More details about versioning are described [here](phenotype-editor/versioning).
 
 Additionally, entities have the following properties in common:
 
-* unique identifier
-* multilingual titles, there can only be one title per language
-* multilingual synonyms
-* multilingual descriptions/definitions
-* codes of standard terminologies, like [LOINC](https://loinc.org), [SNOMED CT](https://www.snomed.org), etc.
+- unique identifier
+- multilingual titles, there can only be one title per language
+- multilingual synonyms
+- multilingual descriptions/definitions
+- codes of standard terminologies, like [LOINC](https://loinc.org), [SNOMED CT](https://www.snomed.org), etc.
 
 You can find more information about the different entity types and the underlying ontological model in our publication:
 
-> Uciteli A, Beger C, Kirsten T, Meineke FA, Herre H. Ontological Modelling and Reasoning of Phenotypes. CEUR Workshop Proceedings. 2019 Sep;2570. issn: 1613-0073. http://ceur-ws.org/Vol-2518/paper-ODLS11.pdf.
+> Uciteli A, Beger C, Kirsten T, Meineke FA, Herre H. Ontological Modelling and Reasoning of Phenotypes. CEUR Workshop Proceedings. 2019 Sep;2570. issn: 1613-0073. <http://ceur-ws.org/Vol-2518/paper-ODLS11.pdf>.
 
 ### Categories
 
@@ -105,7 +106,7 @@ This is done by applying functions (e.g., addition, subtraction, logical 'and' o
 
 The expression of the phenotype 'BMI' (body mass index) could look like:
 
-```
+```txt
 Weight [kg] / (Height [cm] / 100) ^ 2
 ```
 
