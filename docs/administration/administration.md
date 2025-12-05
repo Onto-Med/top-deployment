@@ -231,3 +231,27 @@ After a successful login, they will be redirected back to the TOP Frontend.
   volumes:
     - ./Caddyfile:/etc/caddy/Caddyfile:z
   ```
+
+- **How to configure the framework to use a port other than 80 or 443?**
+
+  If you cannot use port 80 or 443 for some reason, for example if you are using rootless Podman, please update the configuration as follows:
+
+  1. Add the desired port to the environment variable `BASE_URL` in `docker-compose.env`.
+
+     e.g.: `BASE_URL=http://localhost:8080`
+
+  2. Change the port mapping of the Caddy service in `docker-compose.yml` to:
+
+     ```yml
+     ports:
+       - 8080:8080
+     ```
+
+  In the above example, the `BASE_URL` uses port 8080.
+  The same variable is also used in `Caddyfile`.
+  This means that Caddy will listening on port 8080 for incoming requests.
+  Therefore, you need to map the internal port 8080 of the Caddy service to the host's port 8080 in order to expose the TOP Framework components.
+
+  These changes are necessary, because the frontend is a TypeScript application running in the browser.
+  It cannot communicate directly with the backend via the Docker Compose network.
+  Instead, it sends requests to the URL specified in `BASE_URL`.
