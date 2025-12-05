@@ -219,3 +219,15 @@ After a successful login, they will be redirected back to the TOP Frontend.
       entrypoint: java -Xmx4G -cp top-backend.jar:/plugins/* org.springframework.boot.loader.PropertiesLauncher
       # other options...
   ```
+
+- **No read access to mounted files in Docker containers:**
+
+  In case you are using SELinux, mounted files such as `Caddyfile` might not be readable by the Docker containers.
+  You can add the `z` flag to volume specifications in the `docker-compose.yml` file to [modify the SELinux label](https://docs.docker.com/engine/storage/bind-mounts/#configure-the-selinux-label) of the host file or directory.
+
+  e.g.:
+
+  ```yml
+  volumes:
+    - ./Caddyfile:/etc/caddy/Caddyfile:z
+  ```
