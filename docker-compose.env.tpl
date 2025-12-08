@@ -54,6 +54,7 @@ SYSTEM_NOTICE=
 ##
 # Document search related settings. You can ignore this section if DOCUMENTS_ENABLED is false.
 ##
+CONCEPT_GRAPHS_API_ENABLED=false
 DOCUMENTS_ENABLED=false
 RAG_ENABLED=false
 
