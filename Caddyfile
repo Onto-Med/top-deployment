@@ -8,3 +8,7 @@ reverse_proxy /* frontend:80
 
 header / Cache-Control no-cache
 header /api/* Cache-Control no-cache
+
+log {
+    level ERROR
+}
