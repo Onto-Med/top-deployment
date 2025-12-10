@@ -75,6 +75,9 @@ DB_NEO4J_CONNECTION_TIMEOUT=30
 # Endpoint of the concept-graphs service. See https://github.com/Onto-Med/concept-graphs for documentation.
 CONCEPT_GRAPHS_API_ENDPOINT=http://localhost:9007
 
+# Restrict the maximum combined upload size of a document batch in bytes.
+MAX_COMBINED_DOCUMENTS_UPLOAD=2097000
+
 ##
 # Authentication
 ##
