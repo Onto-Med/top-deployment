@@ -27,11 +27,8 @@ API_URL=${BASE_URL}${APP_PATH}
 
 # Adapter configuration files can be stored in a folder and mounted to the docker compose 'backend'
 # service. The variable DATA_SOURCE_CONFIG_DIR is used to modify the location where the backend looks
-# for configuration files for phenotype data adapters. And DOCUMENT_DATA_SOURCE_CONFIG_DIR sets the path
-# for document search adapters.
+# for configuration files for phenotype data adapters.
 DATA_SOURCE_CONFIG_DIR=/configs
-DOCUMENT_DATA_SOURCE_CONFIG_DIR=/configs/nlp
-RAG_ENABLED=false
 
 # The variable QUERY_RESULT_DIR can be used to modify the location where phenotype query results are
 # stored as ZIP files.
@@ -57,10 +54,12 @@ SYSTEM_NOTICE=
 ##
 # Document search related settings. You can ignore this section if DOCUMENTS_ENABLED is false.
 ##
+CONCEPT_GRAPHS_API_ENABLED=false
 DOCUMENTS_ENABLED=false
+RAG_ENABLED=false
 
-# Location of document data source configuration files.
-DOCUMENT_DATA_SOURCE_CONFIG_DIR=config/data_sources/nlp
+# DOCUMENT_DATA_SOURCE_CONFIG_DIR sets the path for document search adapters. (see entry for DATA_SOURCE_CONFIG_DIR)
+DOCUMENT_DATA_SOURCE_CONFIG_DIR=/configs/nlp
 
 # Use the following variables to configure the Neo4j authentication parameters.
 DB_NEO4J_USER=neo4j
