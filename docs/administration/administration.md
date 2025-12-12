@@ -181,7 +181,7 @@ Respective Keycloak containers are already included in the [docker-compose.yml](
 You may also need to modify the configurations in `docker-compose.env`.
 
 If you are running Keycloak for the first time, you need to create an admin account.
-In the `docker-compose.yml` file, set the environment variables `KC_BOOTSTRAP_ADMIN_USERNAME` and `KC_BOOTSTRAP_ADMIN_USERNAME_PASSWORD` to your desired username and password, respectively.
+In the `docker-compose.yml` file, set the environment variables `KC_BOOTSTRAP_ADMIN_USERNAME` and `KC_BOOTSTRAP_ADMIN_PASSWORD` to your desired username and password, respectively.
 After the first startup, these variables can be removed.
 
 After starting Keycloak, log in with the admin credentials and perform the following tasks:
