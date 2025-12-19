@@ -88,6 +88,9 @@ OAUTH2_URL=${BASE_URL}/auth
 OAUTH2_REALM=top-realm
 OAUTH2_CLIENT_ID=top-frontend
 
+# Internal Docker URL, the backend will use to access keycloak.
+OAUTH2_DOCKER_URL=http://keycloak:8080/auth
+
 ##
 # Logging
 ##
