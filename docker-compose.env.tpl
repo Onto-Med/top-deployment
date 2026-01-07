@@ -79,6 +79,10 @@ CONCEPT_GRAPHS_API_ENDPOINT=http://localhost:9007
 # (in bytes when no suffix is given, else append either 'KB' or 'MB')
 MAX_COMBINED_DOCUMENTS_UPLOAD=2MB
 
+# The allowed file types for document uploading
+# (needs to be comma separated list, e.g.: ".txt, .pdf")
+ACCEPT_DOCUMENT_UPLOAD_TYPE=.txt
+
 ##
 # Authentication
 ##
