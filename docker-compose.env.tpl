@@ -54,6 +54,7 @@ SYSTEM_NOTICE=
 ##
 # Document search related settings. You can ignore this section if DOCUMENTS_ENABLED is false.
 ##
+
 CONCEPT_GRAPHS_API_ENABLED=false
 DOCUMENTS_ENABLED=false
 RAG_ENABLED=false
@@ -74,8 +75,13 @@ DB_NEO4J_CONNECTION_TIMEOUT=30
 # Endpoint of the concept-graphs service. See https://github.com/Onto-Med/concept-graphs for documentation.
 CONCEPT_GRAPHS_API_ENDPOINT=http://localhost:9007
 
-# Restrict the maximum combined upload size of a document batch in bytes.
-MAX_COMBINED_DOCUMENTS_UPLOAD=2097000
+# Restrict the maximum combined upload size of a document batch.
+# (in bytes when no suffix is given, else append either 'KB' or 'MB')
+MAX_COMBINED_DOCUMENTS_UPLOAD=2MB
+
+# The allowed file types for document uploading
+# (needs to be comma separated list, e.g.: ".txt, .pdf")
+ACCEPT_DOCUMENT_UPLOAD_TYPE=.txt
 
 ##
 # Authentication
@@ -87,6 +93,9 @@ OAUTH2_ENABLED=false
 OAUTH2_URL=${BASE_URL}/auth
 OAUTH2_REALM=top-realm
 OAUTH2_CLIENT_ID=top-frontend
+
+# Internal Docker URL, the backend will use to access keycloak.
+OAUTH2_DOCKER_URL=http://keycloak:8080/auth
 
 ##
 # Logging

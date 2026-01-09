@@ -216,7 +216,7 @@ After a successful login, they will be redirected back to the TOP Frontend.
   services:
     backend:
       # set maximum heap size to 4GB
-      entrypoint: java -Xmx4G -cp top-backend.jar:/plugins/* org.springframework.boot.loader.PropertiesLauncher
+      entrypoint: [ "java", "-Xmx4G", "-cp", "top-backend.jar", "org.springframework.boot.loader.launch.JarLauncher" ]
       # other options...
   ```
 
