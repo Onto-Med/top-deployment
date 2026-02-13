@@ -101,16 +101,22 @@ OAUTH2_DOCKER_URL=http://keycloak:8080/auth
 # Logging
 ##
 
-# Spring uses Logback by default: TRACE, DEBUG, INFO, WARN, ERROR
+# Available Logback log levels: TRACE, DEBUG, INFO, WARN, ERROR
+LOG_LEVEL_TOP=INFO
+LOG_LEVEL_ROOT=WARN
 LOG_LEVEL_SPRING=WARN
 LOG_LEVEL_LIQUIBASE=WARN
-# https://docs.liquibase.com/concepts/connections/liquibase-environment-variables.html
-LIQUIBASE_LOG_LEVEL=${LOG_LEVEL_LIQUIBASE}
 LOG_LEVEL_HIBERNATE=WARN
 LOG_LEVEL_NEO4J=WARN
+LIQUIBASE_LOG_LEVEL=${LOG_LEVEL_LIQUIBASE}
+
 # Java Util Logging: FINEST, FINER, FINE, CONFIG, INFO, WARNING, SEVERE
 LOG_LEVEL_JUL=WARNING
-JAVA_OPTS=-Djava.util.logging.ConsoleHandler.level=${LOG_LEVEL_JUL} -Dlogging.level.org.springframework=${LOG_LEVEL_SPRING} -Dlogging.level.liquibase=${LOG_LEVEL_LIQUIBASE} -Dlogging.level.org.hibernate=${LOG_LEVEL_HIBERNATE}
+
+# Enable or disable the Spring Boot banner shown at startup
+SPRING_MAIN_BANNER-MODE=off
+
+JAVA_OPTS=-Djava.util.logging.ConsoleHandler.level=${LOG_LEVEL_JUL} -Dlogging.level.care.smith.top=${LOG_LEVEL_TOP} -Dlogging.level.root=${LOG_LEVEL_ROOT} -Dlogging.level.org.springframework=${LOG_LEVEL_SPRING} -Dlogging.level.liquibase=${LOG_LEVEL_LIQUIBASE} -Dlogging.level.org.hibernate=${LOG_LEVEL_HIBERNATE}
 # Some JDKs only pick this up instead of JAVA_OPTS
 JAVA_TOOL_OPTIONS=${JAVA_OPTS}
 
