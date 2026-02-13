@@ -19,6 +19,9 @@ services:
       - top-neo4j-data:/data
     env_file:
       - docker-compose.env
+    command: >
+      bash -c "sed -i \"s/level=\\\"INFO\\\"/level=\\\"${LOG_LEVEL_NEO4J:-WARN}\\\"/g\" /var/lib/neo4j/conf/user-logs.xml && 
+               /startup/docker-entrypoint.sh neo4j"
 
   backend:
     image: ghcr.io/onto-med/top-backend:v0.10.0

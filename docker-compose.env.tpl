@@ -107,6 +107,7 @@ LOG_LEVEL_LIQUIBASE=WARN
 # https://docs.liquibase.com/concepts/connections/liquibase-environment-variables.html
 LIQUIBASE_LOG_LEVEL=${LOG_LEVEL_LIQUIBASE}
 LOG_LEVEL_HIBERNATE=WARN
+LOG_LEVEL_NEO4J=WARN
 # Java Util Logging: FINEST, FINER, FINE, CONFIG, INFO, WARNING, SEVERE
 LOG_LEVEL_JUL=WARNING
 JAVA_OPTS=-Djava.util.logging.ConsoleHandler.level=${LOG_LEVEL_JUL} -Dlogging.level.org.springframework=${LOG_LEVEL_SPRING} -Dlogging.level.liquibase=${LOG_LEVEL_LIQUIBASE} -Dlogging.level.org.hibernate=${LOG_LEVEL_HIBERNATE}
