@@ -8,6 +8,8 @@ services:
       - top-data:/var/lib/postgresql/data
     env_file:
       - docker-compose.env
+    environment:
+      - POSTGRES_INITDB_ARGS=--no-instructions
 
   neo4j:
     image: neo4j:5
@@ -83,6 +85,7 @@ services:
     volumes:
       - keycloak-data:/var/lib/postgresql/data
     environment:
+      - POSTGRES_INITDB_ARGS=--no-instructions
       - POSTGRES_DB=keycloak
       - POSTGRES_USER=keycloak
       - POSTGRES_PASSWORD=keycloak
