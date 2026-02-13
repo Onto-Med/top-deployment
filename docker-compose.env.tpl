@@ -112,3 +112,8 @@ LOG_LEVEL_JUL=WARNING
 JAVA_OPTS=-Djava.util.logging.ConsoleHandler.level=${LOG_LEVEL_JUL} -Dlogging.level.org.springframework=${LOG_LEVEL_SPRING} -Dlogging.level.liquibase=${LOG_LEVEL_LIQUIBASE} -Dlogging.level.org.hibernate=${LOG_LEVEL_HIBERNATE}
 # Some JDKs only pick this up instead of JAVA_OPTS
 JAVA_TOOL_OPTIONS=${JAVA_OPTS}
+
+# These Nginx settings apply to the TOP Frontend container, which is based on an Nginx image.
+# See https://nginx.org/en/docs/ngx_core_module.html#error_log for available error log levels.
+NGINX_ACCESS_LOG=false
+NGINX_ERROR_LOG_LEVEL=warn
