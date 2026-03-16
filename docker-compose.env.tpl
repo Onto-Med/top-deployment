@@ -25,6 +25,11 @@ POSTGRES_PASSWORD=${DB_PASS}
 # In some cases it might be required to change this URL.
 API_URL=${BASE_URL}${APP_PATH}
 
+# Use this variable to enable or disable the query functionality of the framework.
+# Setting this variable to false will hide query-related GUI components of phenotype, concept, and document queries.
+# In addition, some API endpoints will be disabled.
+QUERIES_ENABLED=true
+
 # Adapter configuration files can be stored in a folder and mounted to the docker compose 'backend'
 # service. The variable DATA_SOURCE_CONFIG_DIR is used to modify the location where the backend looks
 # for configuration files for phenotype data adapters.
