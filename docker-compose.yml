@@ -41,7 +41,7 @@ services:
       - docker-compose.env
 
   frontend:
-    image: ghcr.io/onto-med/top-frontend:v0.8.20
+    image: ghcr.io/onto-med/top-frontend:v0.8.21
     restart: unless-stopped
     depends_on:
       - backend
