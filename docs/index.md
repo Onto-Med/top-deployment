@@ -26,6 +26,7 @@ In addition, it provides functionalities for searching in medical documents by i
 ## State of the Project
 
 The TOP Framework is currently under active development.
+However, it already has a lot of features.
 We try to provide a stable and backwards-compatible version of the framework with each release.
 
 A public demo instance is available at: <https://top.imise.uni-leipzig.de>
