@@ -116,7 +116,7 @@ Do the following to enable SSL:
 ### Add Plugins
 
 Plugins can be provided as JAR files (dependencies must be included too, see for example [Apache Maven Assembly Plugin](https://maven.apache.org/plugins/maven-assembly-plugin/usage.html)).
-You just have to place those JAR files in a directory and mount it to the `\plugins` directory of the backend container.
+You just have to place those JAR files in a directory and mount it to the `/plugins` directory of the backend container.
 
 ```yml
 services:
@@ -135,7 +135,7 @@ More information about backend plugins is available at the [top-backend document
 
 You can create data adapter configuration files and mount them into the `backend` container by modifying [docker-compose.yml](https://github.com/Onto-Med/top-deployment/blob/main/docker-compose.yml).
 In this example, we assume that the data source configurations reside in the `./configs` folder.
-To make a data source available to an organization and all of its repositories, an administrator has to add the data source in the organization page via the "Manage"->"Data sources" menu.
+**To make a data source available to an organization and all of its repositories, an administrator has to add the data source in the organization page via the "Manage"->"Data sources" menu.**
 For a detailed specification of the configuration files, see [Data Adapter Configuration](./administration/data-adapter-configuration).
 
 ```yml
@@ -147,7 +147,7 @@ services:
 ```
 
 There is also an option to upload specific formats to create a data source that is directly stored in the backend database.
-This is currently only available for testing repositories and only FHIR and CSV files are supported.
+This is currently only available for testing repositories and only FHIR and CSV files are supported (see Figure 1).
 However, after the upload has finished, you can enable the data source for any organization.
 Navigate to the organization page and select "Manage"->"Data sources" to do so.
 
@@ -159,7 +159,7 @@ More information about the testing functionality is given in [Repository Testing
 
 ### NLP/Document related configuration
 
-To utilize the document search of the framework, one needs three different services running:
+To utilize the document search of the framework, three different services need to be running:
 
 1. Elasticsearch or something similar
 2. A Neo4j cluster
@@ -171,7 +171,7 @@ If no `DOCUMENT_DEFAULT_ADAPTER` is specified, the first adapter found in the fo
 
 Similarly to data adapter configurations, document adapter configurations must be mounted into the backend Docker container.
 
-For convenience reasons, the default value of `DOCUMENT_DATA_SOURCE_CONFIG_DIR` is `/configs/nlp`, which means that you can create a sub folder `nlp` in the host systems `configs` folder and reuse the Docker mount configuration from [NLP/Document related configuration](#add-data-adapter-configurations).
+For convenience reasons, the default value of `DOCUMENT_DATA_SOURCE_CONFIG_DIR` is `/configs/nlp`, which means that you can create a sub folder `nlp` in the host systems `configs` folder and reuse the Docker mount configuration from [Add Data Adapter Configurations](#add-data-adapter-configurations).
 
 ### Protection with OAuth2
 
@@ -197,7 +197,9 @@ After starting Keycloak, log in with the admin credentials and perform the follo
 
 3. Optionally, you can create a user group (e.g.: "top-managers") with roles "manage-users", "query-users", "view-realm", and "view-users".
    Assign users to this group to allow them to manage users in the TOP Framework.
-   They can log in at <http://localhost/auth/admin/top-realm/console>.
+
+   Authorised users can log in at <http://localhost/auth/admin/top-realm/console>.
+   As an alternative, account management can be accessed via the "Edit account" option in the top right menu of the TOP Frontend, followed by "Applications" > "Security Admin Console".
 
 The TOP Frontend should now display a login button in the top right corner.
 If a visitor clicks on that button they will be redirected to the Keycloak login page.
@@ -249,7 +251,7 @@ After a successful login, they will be redirected back to the TOP Frontend.
 
   In the above example, the `BASE_URL` uses port 8080.
   The same variable is also used in `Caddyfile`.
-  This means that Caddy will listening on port 8080 for incoming requests.
+  This means that Caddy will listen on port 8080 for incoming requests.
   Therefore, you need to map the internal port 8080 of the Caddy service to the host's port 8080 in order to expose the TOP Framework components.
 
   These changes are necessary, because the frontend is a TypeScript application running in the browser.
