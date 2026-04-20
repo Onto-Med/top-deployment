@@ -6,12 +6,10 @@ description: "Terminology- and Ontology-based Phenotyping Framework"
 permalink: /
 ---
 
-# TOP Framework
-{: .no_toc }
-
-{: .fs-6 .fw-300 }
+# TOP Framework {: .no_toc }
 
 Terminology- and Ontology-based Phenotyping Framework
+{: .fs-6 .fw-300 }
 
 [How to use](user-manual){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Administration](administration){: .btn .btn-green .fs-5 .mb-4 .mb-md-0 .mr-2 }
@@ -26,6 +24,7 @@ In addition, it provides functionalities for searching in medical documents by i
 ## State of the Project
 
 The TOP Framework is currently under active development.
+However, it already has a lot of features.
 We try to provide a stable and backwards-compatible version of the framework with each release.
 
 A public demo instance is available at: <https://top.imise.uni-leipzig.de>

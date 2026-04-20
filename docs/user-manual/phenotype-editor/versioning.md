@@ -7,7 +7,7 @@ nav_order: 2
 permalink: /user-manual/phenotype-editor/versioning
 ---
 
-# Versioning
+# Versioning {: .no_toc }
 
 Whenever you are creating or changing an entity, a new version is created. You can see the current version of an entity on the top of the entities tab (see figure 1).
 

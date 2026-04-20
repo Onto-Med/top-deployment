@@ -6,11 +6,9 @@ nav_order: 1
 permalink: /administration/data-adapter-configuration
 ---
 
-# Data Adapter Configuration
-{: .no_toc }
+# Data Adapter Configuration {: .no_toc }
 
-## Table of Contents
-{: .no_toc .text-delta }
+## Table of Contents {: .no_toc .text-delta }
 
 1. TOC
 {:toc}
@@ -44,7 +42,7 @@ An adapter configuration consists of the following parts:
 
 The first part is mandatory (see minimal adapter configuration), the rest is optional.
 
-We recommend you to use 
+We recommend you to use
 [adapter_config_schema.json](https://github.com/Onto-Med/top-phenotypic-query/blob/main/src/main/resources/adapter_config_schema.json)
 to create and validate your adapter configurations. For instance, [react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form)
 can be used to build a data adapter configuration via web forms.

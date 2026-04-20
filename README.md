@@ -1,4 +1,5 @@
 # TOP Framework Deployment
+
 This repository contains deployment instructions and resources for the TOP Framework.
 
 The TOP Framework consists of:
@@ -7,12 +8,17 @@ The TOP Framework consists of:
 * **Backend:** [Spring Boot Resource Server](https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/index.html) ([top-backend](https://github.com/Onto-Med/top-backend))
 
 ## State of the Project
-The TOP Framework is currently under heavy development. Usage in a production environment is not yet recommended.
+
+The TOP Framework is currently under active development.
+However, it already has a lot of features.
+We try to provide a stable and backwards-compatible version of the framework with each release.
 
 A public demo instance is available at: <https://top.imise.uni-leipzig.de>
 
 ## Usage
+
 See <https://onto-med.github.io/top-deployment>.
 
 ## License
+
 The TOP Framework is licensed under the [MIT license](LICENSE).
