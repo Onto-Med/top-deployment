@@ -73,5 +73,5 @@ Some analyses require additional configuration, which can be provided as YAML fi
 java -jar top-phenotypic-query-x.x.x.jar analysis --help
 
 # print the number of phenotype classes contained all provided query result archives
-java -har top-phenotypic-query-x.x.x.jar analysis count-phenotypes query_result_1.zip query_result_2.zip
+java -jar top-phenotypic-query-x.x.x.jar analysis count-phenotypes query_result_1.zip query_result_2.zip
 ```
