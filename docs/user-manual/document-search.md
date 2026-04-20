@@ -6,7 +6,7 @@ nav_order: 5
 permalink: /user-manual/document-search
 ---
 
-# Document Search {: .no_toc }
+# Document Search
 
 This page describes how to search for documents in the TOP Framework.
 {: .fs-6 .fw-300 }

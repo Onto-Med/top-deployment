@@ -6,7 +6,7 @@ has_children: true
 permalink: /user-manual
 ---
 
-# User Manual {: .no_toc }
+# User Manual
 
 On the following pages you can find extensive descriptions about the TOP Framework and its functionalities.
 {: .fs-6 .fw-300 }

@@ -6,9 +6,11 @@ has_children: true
 permalink: /administration
 ---
 
-# Administration {: .no_toc }
+# Administration
+{: .no_toc }
 
-## Table of contents {: .no_toc .text-delta }
+## Table of contents
+{: .no_toc .text-delta }
 
 1. TOC
 {:toc}

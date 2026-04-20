@@ -6,12 +6,14 @@ nav_order: 1
 permalink: /user-manual/content-types
 ---
 
-# Content Types {: .no_toc }
+# Content Types
+{: .no_toc }
 
 This page contains detailed information about all content types, storable in the TOP Framework.
 {: .fs-6 .fw-300 }
 
-## Table of contents {: .no_toc .text-delta }
+## Table of contents
+{: .no_toc .text-delta }
 
 1. TOC
 {:toc}

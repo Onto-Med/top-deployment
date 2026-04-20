@@ -6,7 +6,7 @@ nav_order: 4
 permalink: /user-manual/repository-testing
 ---
 
-# Repository Testing {: .no_toc }
+# Repository Testing
 
 This page describes how to test repositories in the TOP Framework.
 {: .fs-6 .fw-300 }

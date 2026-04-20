@@ -7,9 +7,11 @@ nav_order: 1
 permalink: /user-manual/phenotype-editor/manipulate-entities
 ---
 
-# Manipulate Entities {: .no_toc }
+# Manipulate Entities
+{: .no_toc }
 
-## Table of Contents {: .no_toc .text-delta }
+## Table of Contents
+{: .no_toc .text-delta }
 
 1. TOC
 {:toc}
