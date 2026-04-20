@@ -6,11 +6,10 @@ nav_order: 2
 permalink: /administration/command-line-interface
 ---
 
-# Command Line Interface
-{: .no_toc }
-{: .fs-6 .fw-300 }
+# Command Line Interface {: .no_toc }
 
 Using the Query and Reasoning Capabilities of the TOP Framework via Command Line Interface.
+{: .fs-6 .fw-300 }
 
 ## Background
 

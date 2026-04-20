@@ -7,8 +7,7 @@ has_children: false
 permalink: /user-manual/query-builder
 ---
 
-# Query Builder
-{: .no_toc }
+# Query Builder {: .no_toc }
 
 Build and perform phenotypic queries.
 {: .fs-6 .fw-300 }
@@ -16,8 +15,7 @@ Build and perform phenotypic queries.
 The Query Builder enables users to construct phenotypic queries with phenotypes of a repository.
 Queries can be executed against one or more data sources to get result sets with matching subjects (i.e., patients and study participants).
 
-## Table of contents
-{: .no_toc .text-delta }
+## Table of contents {: .no_toc .text-delta }
 
 1. TOC
 {:toc}

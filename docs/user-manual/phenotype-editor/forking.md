@@ -7,7 +7,7 @@ nav_order: 3
 permalink: /user-manual/phenotype-editor/forking
 ---
 
-# Forking
+# Forking {: .no_toc }
 
 Some repositories are marked as "primary". You can reuse entities contained in these repositories for your own repositories.
 Here "reusing" means that a copy of an entity from a primary repository is created. In the background, the copy is linked to the originating entity.

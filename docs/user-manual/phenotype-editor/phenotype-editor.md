@@ -7,8 +7,7 @@ has_children: true
 permalink: /user-manual/phenotype-editor
 ---
 
-# Phenotype Editor
-{: .no_toc }
+# Phenotype Editor {: .no_toc }
 
 Model and manage phenotypes.
 {: .fs-6 .fw-300 }
