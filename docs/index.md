@@ -6,7 +6,8 @@ description: "Terminology- and Ontology-based Phenotyping Framework"
 permalink: /
 ---
 
-# TOP Framework {: .no_toc }
+# TOP Framework
+{: .no_toc }
 
 Terminology- and Ontology-based Phenotyping Framework
 {: .fs-6 .fw-300 }
