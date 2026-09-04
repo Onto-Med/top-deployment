@@ -19,6 +19,12 @@ A public demo instance is available at: <https://top.imise.uni-leipzig.de>
 
 See <https://onto-med.github.io/top-deployment>.
 
+## Citation
+
+To cite the TOP Framework in a publication, please use the following reference:
+
+> Beger C, Strobach D, Schäfermeier R, Matthies F, Höffner K, Uciteli A. Introducing the TOP framework: a novel phenotyping solution for collaborative phenotype algorithm development and application. J Biomed Semant 2026;17:14. <https://doi.org/10.1186/s13326-026-00364-7>.
+
 ## License
 
 The TOP Framework is licensed under the [MIT license](LICENSE).
